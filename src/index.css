@@ -39,6 +39,8 @@
 
   --font-heading: 'Fredoka', system-ui, sans-serif;
   --font-body: 'Quicksand', system-ui, sans-serif;
+  --font-story-title: 'Lilita One', 'Fredoka', cursive, sans-serif;
+  --font-story-hand: 'Kalam', cursive, sans-serif;
 }
 
 * {

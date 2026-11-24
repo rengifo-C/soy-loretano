@@ -8,6 +8,7 @@ export function CuentosSelva() {
   const [reproduciendo, setReproduciendo] = useState(false);
   const [segundoActual, setSegundoActual] = useState(0);
   const [narrandoVoz, setNarrandoVoz] = useState(false);
+  const [tamanoLetra, setTamanoLetra] = useState('grande'); // 'normal', 'grande', 'extra'
 
   const categorias = [
     'Todos',
@@ -86,14 +87,15 @@ export function CuentosSelva() {
   const esAbuelita = cuento.narrador.toLowerCase().includes('abuelita');
 
   return (
-    <section id="cuentos" className="section-container bg-warm-forest">
+    <section id="cuentos" className="section-container bg-warm-forest cuentos-section-enhanced">
       <div className="section-header">
-        <span className="badge-tag verde">Sabiduría de los Abuelos</span>
-        <h2 className="section-title">10 Cuentos y Mitos de la Selva Loretana</h2>
-        <p className="section-desc">
-          En Iquitos, las mejores historias las guardan en la memoria nuestros abuelitos.
-          El Tunche, el Chullachaqui, el Yacuruna, el Bufeo, la Runamula, la Sirena, la Sachamama, el Shapishico, el Ayaymama y el Chicuá.
-          ¡Elige un cuento y escucha la voz de nuestros ancestros!
+        <span className="badge-tag tag-magica">✨ Sabiduría Ancestral de Loreto</span>
+        <h2 className="section-title cuentos-main-title">
+          Cuentos Mágicos de la Selva Loretana
+        </h2>
+        <p className="section-desc cuentos-lead-desc">
+          Voces milenarias que encantan el corazón: historias de advertencia, respeto a la madre naturaleza
+          y amor por nuestras raíces amazónicas. ¡Toca un cuento y disfruta la magia!
         </p>
 
         {/* Filtros por Categoría */}
@@ -104,23 +106,25 @@ export function CuentosSelva() {
               className={`btn-cat-cuento ${categoriaSeleccionada === cat ? 'active' : ''}`}
               onClick={() => setCategoriaSeleccionada(cat)}
             >
-              {cat === 'Todos' ? `Todos (${CUENTOS_ABUELITOS.length})` : cat}
+              {cat === 'Todos' ? `🌟 Todos los Cuentos (${CUENTOS_ABUELITOS.length})` : cat}
             </button>
           ))}
         </div>
       </div>
 
-      {/* Selector de los 10 Cuentos */}
+      {/* Selector de los 10 Cuentos con diseño colorido y tipografía llamativa */}
       <div className="cuentos-carrusel-grid">
         {cuentosFiltrados.map(c => (
           <button
             key={c.id}
             onClick={() => cambiarCuento(c.id)}
-            className={`btn-cuento-card ${cuentoActivoId === c.id ? 'active' : ''} border-${c.color}`}
+            className={`btn-cuento-card card-glow-${c.color} ${cuentoActivoId === c.id ? 'active' : ''}`}
           >
-            <span className="cuento-card-icon">{c.videoThumbnail}</span>
+            <div className="cuento-card-icon-wrap">
+              <span className="cuento-card-icon">{c.videoThumbnail}</span>
+            </div>
             <div className="cuento-card-info">
-              <span className="cuento-cat-tag">{c.categoria}</span>
+              <span className={`cuento-cat-tag tag-${c.color}`}>{c.categoria}</span>
               <strong className="cuento-card-title">{c.titulo}</strong>
               <small className="cuento-card-narrador">🗣️ {c.narrador.split('(')[0]}</small>
             </div>
@@ -130,13 +134,13 @@ export function CuentosSelva() {
       </div>
 
       {/* Pantalla y Reproductor de Video del Abuelito */}
-      <div className={`video-cuento-container border-${cuento.color}`}>
+      <div className={`video-cuento-container border-glow-${cuento.color}`}>
         <div className="video-screen">
           <div className="video-ambient-bg">
             {/* Animación del abuelito en la choza amazónica */}
             <div className={`abuelito-avatar ${reproduciendo ? 'hablando' : ''}`}>
-              <div className="avatar-face">
-                {esAbuelita ? '👵🏼' : '👴🏼'}
+              <div className="avatar-face-glow">
+                <span className="avatar-face">{esAbuelita ? '👵🏼' : '👴🏼'}</span>
               </div>
               <div className="avatar-fogon">🔥🪵</div>
               <span className="avatar-nombre-badge">{cuento.narrador.split('(')[0]}</span>
@@ -146,7 +150,7 @@ export function CuentosSelva() {
               <span className="live-dot">●</span> Relato Loretano en Vivo
             </div>
 
-            {/* Ilustración o icono de fondo del personaje */}
+            {/* Ilustración de fondo */}
             <div className="video-art-bg">
               <span className="video-art-icon-giant">{cuento.videoThumbnail}</span>
             </div>
@@ -191,42 +195,79 @@ export function CuentosSelva() {
               onClick={toggleLecturaVoz}
               className={`btn-voz-narrador ${narrandoVoz ? 'active' : ''}`}
             >
-              {narrandoVoz ? "🔊 Narrando..." : "🎙️ Voz en vivo"}
+              {narrandoVoz ? "🔊 Escuchando..." : "🎙️ Escuchar Voz"}
             </button>
           </div>
         </div>
 
-        {/* Detalle y texto completo del cuento */}
-        <div className="cuento-texto-box">
+        {/* Detalle y texto completo del cuento con tipografía mejorada */}
+        <div className={`cuento-texto-box font-size-${tamanoLetra}`}>
           <div className="cuento-meta-header">
-            <span className={`pill-badge pill-${cuento.color}`}>{cuento.categoria}</span>
-            <span className="cuento-duracion">⏱️ {cuento.duracion}</span>
+            <div className="meta-left">
+              <span className={`pill-badge badge-vibrante-${cuento.color}`}>{cuento.categoria}</span>
+              <span className="cuento-duracion">⏱️ {cuento.duracion} de sabiduría</span>
+            </div>
+
+            {/* Selector de tamaño de letra para fácil lectura */}
+            <div className="font-size-controls">
+              <span className="font-label">Letra:</span>
+              <button
+                className={`btn-font-sz ${tamanoLetra === 'normal' ? 'active' : ''}`}
+                onClick={() => setTamanoLetra('normal')}
+                title="Letra normal"
+              >
+                A
+              </button>
+              <button
+                className={`btn-font-sz ${tamanoLetra === 'grande' ? 'active' : ''}`}
+                onClick={() => setTamanoLetra('grande')}
+                title="Letra grande"
+              >
+                A+
+              </button>
+              <button
+                className={`btn-font-sz ${tamanoLetra === 'extra' ? 'active' : ''}`}
+                onClick={() => setTamanoLetra('extra')}
+                title="Letra extra grande"
+              >
+                A++
+              </button>
+            </div>
           </div>
 
           <h3 className="cuento-titulo-main">{cuento.titulo}</h3>
-          <p className="cuento-narrador-tag">
-            🗣️ Narrado con amor por: <strong>{cuento.narrador}</strong>
-          </p>
-          <p className="cuento-personaje-desc">
-            🌟 <em>{cuento.personaje}</em>
-          </p>
-
-          <div className="cuento-frase-destacada">
-            <span className="quote-badge">“</span>
-            <em>{cuento.fraseAbuelito}</em>
+          
+          <div className="cuento-narrador-row">
+            <span className="narrador-avatar-mini">{esAbuelita ? '👵🏼' : '👴🏼'}</span>
+            <div>
+              <p className="cuento-narrador-tag">
+                Narrado con cariño por: <strong>{cuento.narrador}</strong>
+              </p>
+              <p className="cuento-personaje-desc">
+                🌟 <em>{cuento.personaje}</em>
+              </p>
+            </div>
           </div>
 
+          {/* Frase del Abuelito en estilo pergamino manuscrito */}
+          <div className="cuento-frase-destacada">
+            <span className="quote-badge">“</span>
+            <p className="frase-abuelito-texto">{cuento.fraseAbuelito}</p>
+          </div>
+
+          {/* Párrafos del Cuento con Letra Capital */}
           <div className="cuento-parrafos">
             {cuento.cuentoCompleto.map((parrafo, idx) => (
-              <p key={idx} className="cuento-p">
+              <p key={idx} className={`cuento-p ${idx === 0 ? 'primer-parrafo' : ''}`}>
                 <span className="p-num">{idx + 1}.</span> {parrafo}
               </p>
             ))}
           </div>
 
-          <div className="cuento-moraleja-card">
+          {/* Moraleja con recuadro resplandeciente */}
+          <div className={`cuento-moraleja-card moraleja-${cuento.color}`}>
             <span className="mor-icon">💡</span>
-            <div>
+            <div className="mor-content">
               <strong>Lección para los jóvenes loretanos:</strong>
               <p>{cuento.moraleja}</p>
             </div>
