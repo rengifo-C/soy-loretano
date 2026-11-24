@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { CENTROS_TURISTICOS_IQUITOS } from '../data/loretanoData';
 import { DelfinRosado, Guacamayo, Mototaxi, VictoriaRegia } from './AmazonDrawings';
 
 export function Inicio({ onExplorar, onJugar }) {
+  const [filtroCategoria, setFiltroCategoria] = useState('Todos');
+  const [centroSeleccionado, setCentroSeleccionado] = useState(null);
+
+  const categorias = ['Todos', 'Históricos', 'Naturaleza', 'Paseos y Tradición'];
+
+  const centrosFiltrados = CENTROS_TURISTICOS_IQUITOS.filter(c => {
+    if (filtroCategoria === 'Todos') return true;
+    if (filtroCategoria === 'Históricos') {
+      return c.categoria.includes('Histórico') || c.categoria.includes('Arquitectónica') || c.categoria.includes('Neogótico');
+    }
+    if (filtroCategoria === 'Naturaleza') {
+      return c.categoria.includes('Ecoturismo') || c.categoria.includes('Conservación');
+    }
+    if (filtroCategoria === 'Paseos y Tradición') {
+      return c.categoria.includes('Paseo') || c.categoria.includes('Tradición') || c.categoria.includes('Juventud');
+    }
+    return true;
+  });
+
   return (
     <section id="inicio" className="inicio-section">
       {/* Banner Principal Monumental */}
@@ -27,7 +47,7 @@ export function Inicio({ onExplorar, onJugar }) {
             <p>
               En nuestra tierra nace el río más caudaloso del mundo, crecen plantas que curan el cuerpo y el alma,
               y nuestra gente tiene la sonrisa más cálida del Perú. Conoce tus cuentos, tus comidas, tus bailes
-              y tus plantas. <strong>¡El orgullo loretano se lleva en la sangre!</strong>
+              y tus centros históricos. <strong>¡El orgullo loretano se lleva en la sangre!</strong>
             </p>
           </div>
         </div>
@@ -42,53 +62,127 @@ export function Inicio({ onExplorar, onJugar }) {
           </button>
         </div>
 
-        {/* Galería Visual / Foto Ilustrada de Iquitos */}
-        <div className="foto-iquitos-showcase">
-          <div className="foto-card-main">
-            <div className="foto-overlay">
-              <span className="foto-tag">Río Amazonas • Iquitos</span>
-              <h3>Donde la Selva se une con el Cielo</h3>
-              <p>El majestuoso río de color chocolate que baña nuestra historia y alimenta a miles de familias.</p>
-            </div>
-            {/* Elementos amazónicos integrados */}
-            <div className="foto-art-float float-delfin">
-              <DelfinRosado className="w-28 h-24" />
-            </div>
-            <div className="foto-art-float float-guacamayo">
-              <Guacamayo className="w-24 h-28" />
-            </div>
+        {/* Gran Foto Ilustrada del Río Amazonas */}
+        <div className="foto-card-main">
+          <div className="foto-overlay">
+            <span className="foto-tag">Río Amazonas • Iquitos, Perú</span>
+            <h3>Donde la Selva se une con el Cielo</h3>
+            <p>El majestuoso río de color chocolate que baña nuestra historia y alimenta a miles de familias.</p>
           </div>
-
-          <div className="mini-fotos-grid">
-            <div className="mini-foto-card card-malecon">
-              <span className="mini-icon">🌅</span>
-              <div className="mini-info">
-                <strong>Malecón Tarapacá</strong>
-                <span>El atardecer más hermoso frente al río Itaya</span>
-              </div>
-            </div>
-
-            <div className="mini-foto-card card-mototaxi">
-              <div className="mototaxi-art-wrap">
-                <Mototaxi className="w-20 h-16" />
-              </div>
-              <div className="mini-info">
-                <strong>La Ciudad del Mototaxi</strong>
-                <span>El sonido alegre que recorre cada barrio</span>
-              </div>
-            </div>
-
-            <div className="mini-foto-card card-flora">
-              <div className="victoria-art-wrap">
-                <VictoriaRegia className="w-20 h-16" />
-              </div>
-              <div className="mini-info">
-                <strong>Victoria Regia & Plantas</strong>
-                <span>Naturaleza viva en cochas y lagunas</span>
-              </div>
-            </div>
+          {/* Elementos amazónicos integrados */}
+          <div className="foto-art-float float-delfin">
+            <DelfinRosado className="w-28 h-24" />
+          </div>
+          <div className="foto-art-float float-guacamayo">
+            <Guacamayo className="w-24 h-28" />
           </div>
         </div>
+
+        {/* =========================================================================
+            VITRINA DE CENTROS TURÍSTICOS DE IQUITOS
+            Incluye: Malecón Tarapacá, Plaza de Armas, Casa de Fierro, Catedral de San Juan,
+            Mercado de Belén, Plaza 28 de Julio, Quistococha y el CREA
+           ========================================================================= */}
+        <div className="seccion-centros-turisticos">
+          <div className="centros-header">
+            <span className="badge-tag amarillo">Patrimonio y Naturaleza</span>
+            <h2 className="centros-title">Centros Turísticos de Iquitos que Todo Loretano Debe Conocer</h2>
+            <p className="centros-desc">
+              Monumentos de hierro traídos de Europa, templos neogóticos, paseos frente al río y santuarios de fauna amazónica. ¡Conoce y presume tu tierra!
+            </p>
+
+            {/* Filtros rápidos por categoría */}
+            <div className="centros-filtros">
+              {categorias.map(cat => (
+                <button
+                  key={cat}
+                  className={`btn-filtro-centro ${filtroCategoria === cat ? 'active' : ''}`}
+                  onClick={() => setFiltroCategoria(cat)}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Grid de los 8 Centros Turísticos */}
+          <div className="centros-grid">
+            {centrosFiltrados.map(centro => (
+              <article
+                key={centro.id}
+                className={`centro-card border-${centro.color}`}
+                onClick={() => setCentroSeleccionado(centro)}
+              >
+                <div className="centro-card-top">
+                  <span className="centro-icon">{centro.icono}</span>
+                  <span className={`pill-badge pill-${centro.color}`}>{centro.categoria}</span>
+                </div>
+
+                <h3 className="centro-nombre">{centro.nombre}</h3>
+                <span className="centro-distrito">📍 {centro.distrito}</span>
+                <p className="centro-descripcion">{centro.descripcion}</p>
+
+                <div className="centro-saber-box">
+                  <span className="saber-icon">✨</span>
+                  <p><strong>Lo que debes saber:</strong> {centro.loQueDebesSaber}</p>
+                </div>
+
+                <div className="centro-card-footer">
+                  <span className="btn-ver-detalle">Ver dato curioso y detalles →</span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        {/* Modal de Detalle de Centro Turístico */}
+        {centroSeleccionado && (
+          <div className="modal-backdrop" onClick={() => setCentroSeleccionado(null)}>
+            <div className="modal-content modal-centro-detalle" onClick={e => e.stopPropagation()}>
+              <button className="modal-close" onClick={() => setCentroSeleccionado(null)}>✕</button>
+
+              <div className="modal-centro-header">
+                <span className="modal-centro-icono">{centroSeleccionado.icono}</span>
+                <div>
+                  <span className={`pill-badge pill-${centroSeleccionado.color}`}>
+                    {centroSeleccionado.categoria}
+                  </span>
+                  <h3 className="modal-centro-title">{centroSeleccionado.nombre}</h3>
+                  <span className="modal-centro-loc">📍 {centroSeleccionado.distrito}</span>
+                </div>
+              </div>
+
+              <p className="modal-centro-desc">{centroSeleccionado.descripcion}</p>
+
+              <div className="modal-saber-card">
+                <h4>🌟 ¿Por qué es un orgullo para los loretanos?</h4>
+                <p>{centroSeleccionado.loQueDebesSaber}</p>
+              </div>
+
+              <div className="modal-curioso-card">
+                <h4>💡 Dato Curioso:</h4>
+                <p>{centroSeleccionado.datoCurioso}</p>
+              </div>
+
+              <div className="modal-centro-actions">
+                <button
+                  className="btn-primary"
+                  onClick={() => {
+                    navigator.clipboard?.writeText?.(
+                      `¡Visita ${centroSeleccionado.nombre} en ${centroSeleccionado.distrito}! ${centroSeleccionado.loQueDebesSaber}`
+                    );
+                    alert("¡Lugar copiado para compartir con amigos o en tareas escolares!");
+                  }}
+                >
+                  📋 Copiar información del lugar
+                </button>
+                <button className="btn-secondary" onClick={() => setCentroSeleccionado(null)}>
+                  Cerrar
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Contadores de Identidad */}
         <div className="contadores-identidad">
@@ -97,8 +191,8 @@ export function Inicio({ onExplorar, onJugar }) {
             <span className="lbl-contador">Orgullo Loretano</span>
           </div>
           <div className="contador-item">
-            <span className="num-contador">+50</span>
-            <span className="lbl-contador">Cuentos Ancestrales</span>
+            <span className="num-contador">8</span>
+            <span className="lbl-contador">Centros Turísticos Icónicos</span>
           </div>
           <div className="contador-item">
             <span className="num-contador">#1</span>

@@ -325,3 +325,95 @@ export const INICIATIVAS_CULTURALES = {
     compromiso: "“En mi casa la voz de mis abuelos vale más que mil videos de internet. ¡Este domingo apagamos el celular y encendemos el corazón!”"
   }
 };
+
+export const CENTROS_TURISTICOS_IQUITOS = [
+  {
+    id: "malecon-tarapaca",
+    nombre: "Malecón Tarapacá (Boulevard)",
+    distrito: "Centro Histórico de Iquitos",
+    categoria: "Mirador & Paseo",
+    icono: "🌅",
+    color: "verde",
+    descripcion: "El paseo peatonal más emblemático frente al río Itaya. Construido durante el auge del caucho, está bordeado de casonas con azulejos traídos de Europa y una brisa amazónica refrescante.",
+    loQueDebesSaber: "Es el punto de encuentro romántico y familiar por excelencia. Puedes saborear helados artesanales de aguaje o camu camu mientras contemplas los barquitos de madera surcar el río.",
+    datoCurioso: "Su nombre rinde homenaje a los héroes de la batalla de Tarapacá."
+  },
+  {
+    id: "plaza-armas",
+    nombre: "Plaza de Armas de Iquitos",
+    distrito: "Centro Cívico",
+    categoria: "Patrimonio Histórico",
+    icono: "🏛️",
+    color: "amarillo",
+    descripcion: "El corazón vivo y cívico de Iquitos. En su centro se erige el Obelisco a los combatientes de la Guerra del Pacífico y una gran pileta con espectáculos de agua y luces de colores.",
+    loQueDebesSaber: "Rodeada de comercios, palmeras y edificios coloniales. Los fines de semana se llena de música, alegría juvenil y venta de artesanías loretanas.",
+    datoCurioso: "Es el punto cero desde donde se miden todas las distancias en la ciudad de Iquitos."
+  },
+  {
+    id: "casa-fierro",
+    nombre: "La Histórica Casa de Fierro",
+    distrito: "Esq. Próspero con Putumayo (Plaza de Armas)",
+    categoria: "Joya Arquitectónica",
+    icono: "🏗️",
+    color: "marron",
+    descripcion: "Diseñada en París por los talleres de Gustave Eiffel en 1889. Comprada por caucheros millonarios y traída en barco pieza por pieza a través del Atlántico y del Río Amazonas.",
+    loQueDebesSaber: "Es una de las pocas construcciones de hierro forjado de Eiffel en Sudamérica que permanece intacta en plena selva tropical.",
+    datoCurioso: "Se armó como un gigantesco rompecabezas de metal con miles de pernos y remaches."
+  },
+  {
+    id: "catedral-san-juan",
+    nombre: "Catedral de Iquitos (San Juan Bautista)",
+    distrito: "Frente a la Plaza de Armas",
+    categoria: "Templo Neogótico",
+    icono: "⛪",
+    color: "verde",
+    descripcion: "Imponente templo de estilo neogótico construido entre 1911 y 1924. Su alta torre de más de 20 metros y su reloj suizo traído en 1925 marcan el compás del día en Iquitos.",
+    loQueDebesSaber: "Consagrada a San Juan Bautista, santo patrono de toda la Amazonía peruana, donde cada 24 de junio se bendice a los fieles y al agua sagrada.",
+    datoCurioso: "Sus vitrales fueron traídos desde Europa y resistieron más de un siglo de tempestades tropicales."
+  },
+  {
+    id: "mercado-belen",
+    nombre: "Barrio y Mercado de Belén",
+    distrito: "Distrito de Belén",
+    categoria: "Cultura Viva & Tradición",
+    icono: "🛶",
+    color: "rosado",
+    descripcion: "Conocido internacionalmente como 'La Venecia Amazónica'. En la época de creciente, las casas flotan sobre pilotes de madera de balsa y los vecinos se trasladan en canoas.",
+    loQueDebesSaber: "En su interior se halla el célebre Pasaje Paquito, epicentro de la medicina natural donde hallarás raíces como chuchuhuasi, uña de gato y los famosos licores regionales.",
+    datoCurioso: "Es el mercado fluvial más dinámico del oriente, donde atracan las canoas con pescados frescos recién salidos del río."
+  },
+  {
+    id: "plaza-28-julio",
+    nombre: "Plaza 28 de Julio",
+    distrito: "Iquitos Urbano",
+    categoria: "Recreación & Juventud",
+    icono: "🎪",
+    color: "amarillo",
+    descripcion: "La plaza pública más espaciosa de todo el departamento de Loreto. Un gran parque con áreas verdes, pistas para patinaje, eventos cívicos y ferias juveniles.",
+    loQueDebesSaber: "Punto de encuentro favorito de la juventud loretana para practicar patinaje, skate, ensayar danzas amazónicas y disfrutar de raspadillas con jarabe regional.",
+    datoCurioso: "Cuenta con un avión Mirage histórico de la FAP en homenaje a los aviadores que unen a los pueblos de la selva."
+  },
+  {
+    id: "quistococha",
+    nombre: "Complejo Turístico de Quistococha",
+    distrito: "Km 5.5 Carretera Iquitos - Nauta",
+    categoria: "Laguna & Ecoturismo",
+    icono: "🏖️",
+    color: "verde",
+    descripcion: "Parque recreativo natural de casi 370 hectáreas alrededor de la laguna de Quistococha. Cuenta con 'Tunchi Playa', una playa artificial de arena blanca natural y bosque virgen.",
+    loQueDebesSaber: "Puedes bañarte en sus aguas refrescantes, alquilar botes a pedal, almorzar paiche frito con tacacho y observar fauna rescatada en su zoológico ecológico.",
+    datoCurioso: "La arena blanca de Tunchi Playa no quema los pies gracias a los minerales de la cuenca amazónica."
+  },
+  {
+    id: "crea",
+    nombre: "CREA (Centro de Rescate Amazónico)",
+    distrito: "Km 13.5 Carretera Iquitos - Nauta",
+    categoria: "Conservación de Manatíes",
+    icono: "🦭",
+    color: "rosado",
+    descripcion: "El centro de protección y educación ambiental más querido de Loreto. Dedicado a rescatar, cuidar y reinsertar a los tiernos manatíes amazónicos huérfanos y otras especies.",
+    loQueDebesSaber: "Los jóvenes pueden interactuar con los manatíes bebés dándoles su biberón y aprendiendo por qué debemos cuidar nuestros ríos sin contaminarlos.",
+    datoCurioso: "El manatí amazónico es un animal herbívoro 100% pacífico que limpia las plantas de las cochas y no existe en ninguna otra parte del planeta."
+  }
+];
+
