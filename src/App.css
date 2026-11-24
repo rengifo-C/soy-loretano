@@ -638,56 +638,140 @@
 }
 
 /* ================= 2. SECCIÓN CUENTOS DE LA SELVA ================= */
-.cuentos-tabs-wrapper {
+.cuentos-categorias-bar {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.btn-cuento-tab {
+.btn-cat-cuento {
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 700;
   background: var(--blanco);
-  border: 2.5px solid #E2E8F0;
+  border: 1.5px solid #E2E8F0;
+  color: var(--texto-medio);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cat-cuento:hover {
+  background: var(--verde-claro);
+  border-color: var(--verde-borde);
+  color: var(--verde-selva-dark);
+}
+
+.btn-cat-cuento.active {
+  background: var(--verde-selva);
+  color: var(--blanco);
+  border-color: var(--verde-selva);
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.35);
+}
+
+/* Carrusel y Grid de los 10 Cuentos */
+.cuentos-carrusel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.25rem;
+}
+
+.btn-cuento-card {
+  background: var(--blanco);
+  border: 2px solid #E2E8F0;
   border-radius: var(--radius-lg);
-  padding: 1rem 1.5rem;
+  padding: 1rem 1.15rem;
   display: flex;
   align-items: center;
   gap: 0.85rem;
   cursor: pointer;
   box-shadow: var(--shadow-sm);
+  text-align: left;
+  position: relative;
   transition: all 0.25s ease;
 }
 
-.btn-cuento-tab:hover {
-  transform: translateY(-2px);
+.btn-cuento-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
 }
 
-.btn-cuento-tab.active {
+.btn-cuento-card.active {
   border-color: var(--verde-selva-dark);
   background: var(--verde-claro);
   box-shadow: var(--shadow-md);
+  border-width: 2.5px;
 }
 
-.cuento-tab-icon {
-  font-size: 2rem;
+.cuento-card-icon {
+  font-size: 2.2rem;
+  background: #F8FAFC;
+  padding: 0.4rem;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
 }
 
-.cuento-tab-text {
-  text-align: left;
+.cuento-card-info {
   display: flex;
   flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+  min-width: 0;
 }
 
-.cuento-tab-text strong {
-  font-size: 1.15rem;
+.cuento-cat-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--verde-selva);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.cuento-card-title {
+  font-size: 1.05rem;
   color: var(--verde-selva-dark);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.cuento-tab-text small {
-  font-size: 0.85rem;
+.cuento-card-narrador {
+  font-size: 0.78rem;
   color: var(--marron-tierra);
-  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cuento-card-time {
+  font-size: 0.72rem;
+  color: var(--texto-claro);
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+.avatar-nombre-badge {
+  background: rgba(0, 0, 0, 0.7);
+  color: #FBBF24;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+
+.video-art-icon-giant {
+  font-size: 5rem;
+  opacity: 0.25;
+}
+
+.cuento-personaje-desc {
+  font-size: 0.92rem;
+  color: var(--marron-tierra);
 }
 
 /* Pantalla de Video del Abuelito */

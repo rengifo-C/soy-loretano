@@ -17,10 +17,18 @@ En Iquitos, muchos jóvenes se han desconectado de su cultura: no conocen sus cu
    - Bienvenida monumental y manifiesto contra la vergüenza cultural.
    - Galería visual de Iquitos (Río Amazonas, Malecón Tarapacá, flora y mototaxis).
    - Contadores de identidad y orgullo loretano.
-2. **👵🏼 2. Cuentos de la Selva contados por Abuelitos**:
-   - **El Chullachaqui** (narrado por Abuelita Rosa, 82 años).
-   - **El Yacuruna** (narrado por Abuelo Don Teófilo, 78 años).
-   - Reproductor interactivo de video/audio, transcripción completa y las moralejas ancestrales.
+2. **👵🏼 2. Cuentos de la Selva contados por Abuelitos (10 Cuentos Tradicionales)**:
+   - **El Tunche**: El silbido helado en la noche profunda.
+   - **El Chullachaqui**: El protector del monte con pie de venado.
+   - **El Yacuruna**: El señor de las profundidades del Río Amazonas.
+   - **El Bufeo Colorado**: El delfín rosado que enamora en las fiestas de San Juan.
+   - **La Runamula**: El ser mítico mitad mujer y mitad mula con herraduras de fuego.
+   - **La Sirena**: La doncella de las aguas calmas y cochas vírgenes.
+   - **La Sachamama**: La titánica serpiente madre de la tierra y los bosques.
+   - **El Shapishico**: El duendecillo travieso que come frutas dulces en las chacras.
+   - **El Ayaymama**: Los dos niños convertidos en aves nocturnas por amor a su madre.
+   - **El Chicuá**: El ave oráculo que avisa la buena fortuna o previene peligros en la trocha.
+   - Incluye reproductor interactivo de video/audio, transcripción completa, narración en voz alta y las moralejas ancestrales.
 3. **🍲 3. Recetas Loretanas Paso a Paso**:
    - Guía interactiva paso a paso con fotos/ilustraciones para preparar:
      - **El Juane de Gallina**

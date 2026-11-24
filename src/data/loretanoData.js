@@ -3,10 +3,31 @@
 
 export const CUENTOS_ABUELITOS = [
   {
+    id: "tunche",
+    titulo: "El Tunche Maligno y el Silbido en la Noche",
+    narrador: "Abuelo Don Segundo (75 años, Requena)",
+    personaje: "El alma errante de la selva cuyo silbido hiela la sangre",
+    categoria: "Espíritus del Monte",
+    duracion: "3:50 min",
+    videoThumbnail: "🦉💨",
+    color: "verde",
+    sinopsis: "El espíritu más temido de la Amazonía. Vaga entre las copas de las lupunas emitiendo un silbido agudo y penetrante. ¡Jamás debes silbarle de vuelta!",
+    cuentoCompleto: [
+      "Hijitos, en la noche oscura de la selva profunda, cuando la luna se oculta tras los nubarrones, se escucha un silbido largo, frío y penetrante: 'fiiiinnn... fin, fin...'. Los viejos loretanos sabemos que es el Tunche.",
+      "El Tunche es el alma en pena de un hombre que no encontró sosiego en vida y vaga eternamente entre los árboles más altos del monte. No tiene cuerpo físico, es como una niebla fría con ojos brillantes.",
+      "Nunca silbes de noche dentro de la selva, guambrillo. Si cometes el error de responderle, el Tunche creerá que lo estás desafiando y se acercará cada vez más rápido, dando vueltas alrededor de tu choza.",
+      "Pero los abuelos sabemos el gran secreto: el Tunche solo puede dañar a quienes tienen el corazón cargado de maldad o culpa. Si tú eres una persona buena, respetas a tus padres y guardas silencio con fe, el Tunche pasará de largo como una ráfaga de viento.",
+      "Por eso, muchachos: a la noche selvática se le tiene respeto, jamás burla ni arrogancia."
+    ],
+    moraleja: "Mantener la serenidad en los momentos de temor y respetar el silencio sagrado de la noche amazónica.",
+    fraseAbuelito: "“A la noche selvática se le tiene respeto, jamás burla ni desafío.”"
+  },
+  {
     id: "chullachaqui",
     titulo: "El Misterio del Chullachaqui",
     narrador: "Abuelita Rosa (82 años, nacida en Belén - Iquitos)",
     personaje: "El duende protector de los montes con pie desigual",
+    categoria: "Espíritus del Monte",
     duracion: "3:45 min",
     videoThumbnail: "🌲👣",
     color: "verde",
@@ -22,10 +43,11 @@ export const CUENTOS_ABUELITOS = [
     fraseAbuelito: "“El monte tiene dueño, guambrillos. Si lo respetas con amor, la selva siempre te cuidará.”"
   },
   {
-    id: "yacumama",
+    id: "yacuruna",
     titulo: "El Secreto del Yacuruna y la Madre Agua",
     narrador: "Abuelo Don Teófilo (78 años, pescador artesanal de Nauta)",
     personaje: "El señor místico de las profundidades del Río Amazonas",
+    categoria: "Misterios del Agua",
     duracion: "4:12 min",
     videoThumbnail: "🌊🐬",
     color: "rosado",
@@ -39,8 +61,149 @@ export const CUENTOS_ABUELITOS = [
     ],
     moraleja: "Cuidar la pureza de nuestros ríos y valorar la riqueza natural de Loreto como nuestro mayor tesoro.",
     fraseAbuelito: "“El Amazonas no tiene dueño humano; el río es vida, sangre de Loreto y orgullo de todos nosotros.”"
+  },
+  {
+    id: "bufeo",
+    titulo: "El Bufeo Colorado (Delfín Rosado)",
+    narrador: "Abuelita Carmen (80 años, Punchana - Iquitos)",
+    personaje: "El apuesto caballero encantador de las fiestas patronales",
+    categoria: "Misterios del Agua",
+    duracion: "4:05 min",
+    videoThumbnail: "🐬🎩",
+    color: "rosado",
+    sinopsis: "El delfín rosado que en noches de fiesta se convierte en un elegante forastero con sombrero de paja para enamorar a las muchachas del pueblo.",
+    cuentoCompleto: [
+      "El majestuoso delfín rosado de nuestros ríos tiene un secreto que todo loretano debe conocer. En las noches de luna llena y fiesta patronal de San Juan, el bufeo colorado sale del agua transformado en un apuesto caballero.",
+      "Viste un impecable traje blanco de lino, zapatos relucientes y un hermoso sombrero de paja fina que jamás se quita, ni para saludar ni para sentarse a la mesa.",
+      "Entra a los bochinches con su sonrisa encantadora, invita aguajina y masato, saca a bailar la pandilla a la muchacha más hermosa y la conquista con versos dulces al oído.",
+      "Pero fíjense bien, muchachas: el sombrero de paja cubre el orificio respiratorio que aún conserva en la coronilla. Antes de que cante el primer gallo al amanecer, el galán debe correr al puerto y lanzarse al río. Al contacto con el agua, recobra su cola y sus aletas rosadas.",
+      "Por eso las abuelas advertimos a las jovencitas: no se dejen deslumbrar por caras bonitas ni forasteros que ocultan su identidad."
+    ],
+    moraleja: "No dejarse engañar por las apariencias superficiales y valorar la sinceridad y las buenas intenciones.",
+    fraseAbuelito: "“No todo lo que brilla en la fiesta es oro, hijita; fíjate siempre en la verdad del corazón.”"
+  },
+  {
+    id: "runamula",
+    titulo: "La Leyenda de la Runamula",
+    narrador: "Abuelita Elvira (84 años, Morona Cocha - Iquitos)",
+    personaje: "La criatura mitad mujer y mitad mula con herraduras de fuego",
+    categoria: "Espíritus del Monte",
+    duracion: "3:30 min",
+    videoThumbnail: "🔥🐴",
+    color: "marron",
+    sinopsis: "El castigo mítico a los amores prohibidos y las traiciones. Un ser que galopa en las noches oscuras botando llamaradas por la boca.",
+    cuentoCompleto: [
+      "Esta es una de las advertencias más serias de nuestros antepasados. Cuentan que cuando una mujer rompía sus votos más sagrados o traicionaba los valores de su familia, sobre ella caía un encantamiento nocturno.",
+      "Al filo de la medianoche, en los días de luna menguante, se escuchaba un galope ensordecedor que estremecía los techos de palma. La mujer se transformaba en la Runamula: mitad cuerpo de mujer y mitad mula salvaje.",
+      "Un jinete invisible con riendas de fuego la montaba y la hacía correr a toda velocidad sobre piedras, barriales y espinas de tangarana. La criatura relinchaba con alaridos humanos que hacían llorar a los perros del pueblo.",
+      "Al clarear el día, la mujer despertaba en su cama con moretones y rasguños profundos en los brazos y piernas sin saber por qué, hasta que buscaba el perdón y la reconciliación con sus seres queridos.",
+      "Este cuento nos enseña que el respeto mutuo, la lealtad y la honestidad en el amor son pilares que sostienen la paz de nuestros hogares."
+    ],
+    moraleja: "La lealtad, el respeto y la honestidad en las relaciones familiares y de pareja.",
+    fraseAbuelito: "“La mentira y la traición queman por dentro como herraduras al rojo vivo.”"
+  },
+  {
+    id: "sirena",
+    titulo: "La Sirena de las Cochas Amazónicas",
+    narrador: "Abuelo Don Anselmo (79 años, Mazán)",
+    personaje: "La doncella de cabellos de oro que custodia las cochas vírgenes",
+    categoria: "Misterios del Agua",
+    duracion: "3:55 min",
+    videoThumbnail: "🧜🏼‍♀️🌊",
+    color: "rosado",
+    sinopsis: "La bella mujer con cola de paiche que peina sus cabellos dorados en las orillas solitarias y cautiva con su canto a los pescadores.",
+    cuentoCompleto: [
+      "En las cochas más escondidas de la selva baja, donde el agua es calma y profunda como un espejo de obsidiana, habita la Sirena de la selva.",
+      "Tiene el rostro y torso de una doncella de piel dorada y unos ojos verdes luminosos como hojas tiernas. De la cintura hacia abajo, su cuerpo es una deslumbrante cola de pez con escamas gigantescas que brillan con tonos de oro y esmeralda.",
+      "Al mediodía, cuando el calor arrecia y el monte calla, la Sirena sube a descansar sobre un tronco de cedro flotante. Saca su peine tallado en plata y entona un canto tan dulce y melancólico que hasta el viento parece detenerse a escuchar.",
+      "Los pescadores solitarios que se dejan seducir por su voz caen en un ensueño y son llevados suavemente al fondo de la cocha, donde la Sirena tiene un palacio hecho de arena blanca y nenúfares.",
+      "Los abuelos advertimos a los muchachos que van de pesca: si escuchas una melodía celestial en una cocha virgen, reza una oración, no mires fijamente al agua y rema con calma hacia la orilla."
+    ],
+    moraleja: "Saber poner límites ante las tentaciones que pueden poner en riesgo nuestra vida y nuestro futuro.",
+    fraseAbuelito: "“Las aguas de la selva tienen su encanto; admíralas con respeto desde la orilla segura.”"
+  },
+  {
+    id: "sachamama",
+    titulo: "La Gran Sachamama (La Madre de la Tierra)",
+    narrador: "Abuelo Don Lizardo (81 años, Tamshiyacu)",
+    personaje: "La descomunal serpiente milenaria sobre cuyo lomo crecen árboles",
+    categoria: "Espíritus del Monte",
+    duracion: "4:30 min",
+    videoThumbnail: "🐍⛰️",
+    color: "verde",
+    sinopsis: "La serpiente colosal tan antigua e inmóvil que parece una colina cubierta de vegetación. Es la guardiana madre de la tierra amazónica.",
+    cuentoCompleto: [
+      "Mucho antes de que existieran las ciudades y los caminos, la Madre Naturaleza puso a dos guardianas descomunales a cuidar el mundo: en los ríos a la Yacumama, y en la tierra firme a la Sachamama.",
+      "La Sachamama es una serpiente tan titánica y antigua que pasa siglos enteros en un solo lugar sin moverse. Sobre su lomo se acumula tierra negra, nacen orquídeas, crecen helechos y hasta se elevan árboles corpulentos.",
+      "Cuentan los monteros viejos que muchos cazadores han caminado sobre su lomo creyendo que subían a un cerro o a una loma del bosque. Pero cuando la gran serpiente bosteza o respira hondo, las hojas tiemblan y se siente una fuerza magnética en el aire.",
+      "La Sachamama no ataca por atacar: ella duerme y sostiene el equilibrio ecológico de la selva. Atrae a su boca a los animales que le sirven de alimento con el poder de su mirada magnética.",
+      "Cuando finalmente decide cambiar de lugar, el suelo retumba con un temblor suave y a su paso abre nuevas quebradas y canales en la selva. Es el símbolo del poder infinito de nuestra Pachamama amazónica."
+    ],
+    moraleja: "Comprender la inmensidad de la selva y cuidar la tierra como nuestro hogar sagrado.",
+    fraseAbuelito: "“La tierra que pisas está viva, guambrillo. Camina sobre ella con agradecimiento y respeto.”"
+  },
+  {
+    id: "shapishico",
+    titulo: "El Shapishico (El Duende Pícaro de la Selva)",
+    narrador: "Abuelita Benita (76 años, San Juan Bautista - Iquitos)",
+    personaje: "El pequeño duende barrigón que hace travesuras en las chacras",
+    categoria: "Espíritus del Monte",
+    duracion: "3:15 min",
+    videoThumbnail: "👶🏼🌴",
+    color: "amarillo",
+    sinopsis: "El duendecillo travieso que adora las frutas dulces, trenza el pelo de los caballos y ayuda a los niños buenos y trabajadores.",
+    cuentoCompleto: [
+      "¡Ay, el Shapishico! De todos los seres del monte, este es el más gracioso y travieso. Es un hombrecito de apenas medio metro de altura, con pies descalzos y una barriguita gorda de tanto comer frutas dulces.",
+      "Tiene el cabello largo y alborotado lleno de hojas secas, viste una cushma diminuta de algodón y le encantan las guabas, los caimitos maduros y el aguaje dulce.",
+      "En las tardes y noches entra a las chacras loretanas a jugar. Si los campesinos dejan los machetes mal guardados, el Shapishico los cambia de sitio; si hay caballos, les teje trencitas apretadas en las crines que nadie puede desatar.",
+      "A los muchachos ociosos y malcriados les tira cáscaras de plátano desde las ramas para darles un sustito. Pero si ve a un niño respetuoso, que ayuda a sus padres en la chacra y no destruye las plantas, el Shapishico le deja racimos de uvillas maduras al borde del camino.",
+      "Los abuelos le dejamos a veces un platito de miel o plátano frito en la entrada del bosque como señal de cariño y amistad."
+    ],
+    moraleja: "La alegría, el trabajo honrado y la generosidad traen simpatía y bendiciones en la vida.",
+    fraseAbuelito: "“Sé alegre y trabajador en la vida, que la naturaleza premia a los de buen corazón.”"
+  },
+  {
+    id: "ayaymama",
+    titulo: "La Conmovedora Leyenda del Ayaymama",
+    narrador: "Abuelita Jacinta (85 años, Yurimaguas)",
+    personaje: "Los dos hermanitos convertidos en aves que buscan a su madre",
+    categoria: "Aves y Encantos",
+    duracion: "4:20 min",
+    videoThumbnail: "🕊️😢",
+    color: "marron",
+    sinopsis: "La historia más tierna de Loreto. Dos niños abandonados en el monte por una peste que se transformaron en aves nocturnas con un canto lleno de amor filial.",
+    cuentoCompleto: [
+      "Esta es la leyenda que más lágrimas ha arrancado a las familias de Loreto, pero también la que más amor nos enseña.",
+      "Hace muchas generaciones, una peste implacable atacó a una comunidad indígena. Viendo que casi todos enfermaban, una joven madre tomó a sus dos hijitos pequeños y, con el corazón destrozado, los llevó a una colina alta y protegida en lo profundo del monte para salvarlos del contagio.",
+      "Les dejó comida, agua fresca y una choza de hojas de plátano, prometiéndoles con un beso: 'Esperen aquí, mis amores, que mamá volverá apenas pase el peligro'. Pero la pobre madre no resistió y falleció en el pueblo.",
+      "Los hermanitos esperaron días enteros. Cuando se acabó la comida y comprendieron que su madre no volvería, rompieron en un llanto tan amargo que el gran espíritu del bosque sintió compasión. Para evitar que murieran de hambre y soledad, convirtió sus bracitos en alas suaves y sus cuerpos en aves nocturnas.",
+      "Al verse con alas, los niños volaron al cielo buscando a su aldea. Desde entonces, en las noches de luna silenciosa, se posan en las ramas altas y cantan con voz desgarradora y humana: '¡Ay, ay, mama... huarmi huahua!', llamando eternamente a la madre que dio la vida por ellos."
+    ],
+    moraleja: "El inmenso amor de una madre y el deber sagrado de valorar, cuidar y honrar a la familia.",
+    fraseAbuelito: "“Abraza a tu madre todos los días, guambrillo; su amor es la bendición más grande que Dios te dio.”"
+  },
+  {
+    id: "chicua",
+    titulo: "El Chicuá (El Ave Mensajera de los Presagios)",
+    narrador: "Abuelo Don Casimiro (83 años, Contamana)",
+    personaje: "El pájaro oráculo que avisa la buena suerte o previene el peligro",
+    categoria: "Aves y Encantos",
+    duracion: "3:35 min",
+    videoThumbnail: "🦜🔮",
+    color: "amarillo",
+    sinopsis: "El ave que acompaña al ribereño en las trochas. Su canto alegre anuncia buenas noticias y pesca abundante; su canto quejumbroso previene peligros.",
+    cuentoCompleto: [
+      "El Chicuá es un pájaro de plumaje pardo rojizo, cola alargada y ojos vivos que habita en los senderos y purmas cercanas a las chacras.",
+      "Desde tiempos ancestrales, los cazadores, pescadores y agricultores de Loreto sabemos que el Chicuá es el mensajero de la selva, un ave con el don de prevenir lo que va a ocurrir.",
+      "Si vas caminando por la trocha y el Chicuá vuela a tu derecha cantando con alegría: '¡Chic-uá, chic-uá, chic-uá!', alégrate compadre, porque tu jornada será bendecida: pescarás hermosas gamitanas, venderás todos tus productos o recibirás una visita muy querida en tu casa.",
+      "Pero si el Chicuá se cruza repentinamente a tu izquierda y su silbido suena quejumbroso y cortado: '¡Chic... uáaa!', el abuelo cazador frena en seco. Ese canto es un aviso de alerta: te avisa que metros más adelante hay una víbora jergón camuflada en la hojarasca o que una rama podrida está a punto de desprenderse.",
+      "El verdadero loretano jamás le tira piedras al Chicuá; se detiene, escucha su consejo y da gracias al creador por enviarle un guardián con plumas en el camino."
+    ],
+    moraleja: "Aprender a escuchar las señales de la naturaleza y valorar la fauna silvestre como aliada y protectora.",
+    fraseAbuelito: "“El monte habla a través de sus aves; el que sabe escuchar, camina siempre seguro.”"
   }
 ];
+
 
 export const RECETAS_PASO_PASO = [
   {

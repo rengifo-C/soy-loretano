@@ -3,10 +3,23 @@ import { CUENTOS_ABUELITOS } from '../data/loretanoData';
 import { DelfinRosado } from './AmazonDrawings';
 
 export function CuentosSelva() {
-  const [cuentoActivoId, setCuentoActivoId] = useState('chullachaqui');
+  const [cuentoActivoId, setCuentoActivoId] = useState('tunche');
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Todos');
   const [reproduciendo, setReproduciendo] = useState(false);
   const [segundoActual, setSegundoActual] = useState(0);
   const [narrandoVoz, setNarrandoVoz] = useState(false);
+
+  const categorias = [
+    'Todos',
+    'Espíritus del Monte',
+    'Misterios del Agua',
+    'Aves y Encantos'
+  ];
+
+  const cuentosFiltrados = CUENTOS_ABUELITOS.filter(c => {
+    if (categoriaSeleccionada === 'Todos') return true;
+    return c.categoria === categoriaSeleccionada;
+  });
 
   const cuento = CUENTOS_ABUELITOS.find(c => c.id === cuentoActivoId) || CUENTOS_ABUELITOS[0];
 
@@ -55,7 +68,7 @@ export function CuentosSelva() {
       const textoParaLeer = `${cuento.titulo}. Narrado por ${cuento.narrador}. ${cuento.cuentoCompleto.join(' ')}`;
       const utterance = new SpeechSynthesisUtterance(textoParaLeer);
       utterance.lang = 'es-PE';
-      utterance.rate = 0.9; // Ritmo pausado y cariñoso como abuelito
+      utterance.rate = 0.88; // Ritmo pausado y cálido como un abuelo de la selva
 
       utterance.onend = () => {
         setNarrandoVoz(false);
@@ -70,30 +83,48 @@ export function CuentosSelva() {
     }
   };
 
+  const esAbuelita = cuento.narrador.toLowerCase().includes('abuelita');
+
   return (
     <section id="cuentos" className="section-container bg-warm-forest">
       <div className="section-header">
-        <span className="badge-tag verde">Historias Ancestrales</span>
-        <h2 className="section-title">Cuentos de la Selva Contados por Abuelitos</h2>
+        <span className="badge-tag verde">Sabiduría de los Abuelos</span>
+        <h2 className="section-title">10 Cuentos y Mitos de la Selva Loretana</h2>
         <p className="section-desc">
-          En Iquitos, las mejores historias no están en la televisión: las guardan en la memoria nuestros abuelitos.
-          ¡Escucha a <strong>Abuelita Rosa</strong> y a <strong>Don Teófilo</strong>!
+          En Iquitos, las mejores historias las guardan en la memoria nuestros abuelitos.
+          El Tunche, el Chullachaqui, el Yacuruna, el Bufeo, la Runamula, la Sirena, la Sachamama, el Shapishico, el Ayaymama y el Chicuá.
+          ¡Elige un cuento y escucha la voz de nuestros ancestros!
         </p>
+
+        {/* Filtros por Categoría */}
+        <div className="cuentos-categorias-bar">
+          {categorias.map(cat => (
+            <button
+              key={cat}
+              className={`btn-cat-cuento ${categoriaSeleccionada === cat ? 'active' : ''}`}
+              onClick={() => setCategoriaSeleccionada(cat)}
+            >
+              {cat === 'Todos' ? `Todos (${CUENTOS_ABUELITOS.length})` : cat}
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* Selector de Cuentos */}
-      <div className="cuentos-tabs-wrapper">
-        {CUENTOS_ABUELITOS.map(c => (
+      {/* Selector de los 10 Cuentos */}
+      <div className="cuentos-carrusel-grid">
+        {cuentosFiltrados.map(c => (
           <button
             key={c.id}
             onClick={() => cambiarCuento(c.id)}
-            className={`btn-cuento-tab ${cuentoActivoId === c.id ? 'active' : ''} tab-${c.color}`}
+            className={`btn-cuento-card ${cuentoActivoId === c.id ? 'active' : ''} border-${c.color}`}
           >
-            <span className="cuento-tab-icon">{c.videoThumbnail}</span>
-            <div className="cuento-tab-text">
-              <strong>{c.titulo}</strong>
-              <small>{c.narrador.split('(')[0]}</small>
+            <span className="cuento-card-icon">{c.videoThumbnail}</span>
+            <div className="cuento-card-info">
+              <span className="cuento-cat-tag">{c.categoria}</span>
+              <strong className="cuento-card-title">{c.titulo}</strong>
+              <small className="cuento-card-narrador">🗣️ {c.narrador.split('(')[0]}</small>
             </div>
+            <span className="cuento-card-time">⏱️ {c.duracion}</span>
           </button>
         ))}
       </div>
@@ -105,22 +136,19 @@ export function CuentosSelva() {
             {/* Animación del abuelito en la choza amazónica */}
             <div className={`abuelito-avatar ${reproduciendo ? 'hablando' : ''}`}>
               <div className="avatar-face">
-                {cuentoActivoId === 'chullachaqui' ? '👵🏼' : '👴🏼'}
+                {esAbuelita ? '👵🏼' : '👴🏼'}
               </div>
               <div className="avatar-fogon">🔥🪵</div>
+              <span className="avatar-nombre-badge">{cuento.narrador.split('(')[0]}</span>
             </div>
 
             <div className="video-watermark">
               <span className="live-dot">●</span> Relato Loretano en Vivo
             </div>
 
-            {/* Ilustración de fondo */}
+            {/* Ilustración o icono de fondo del personaje */}
             <div className="video-art-bg">
-              {cuentoActivoId === 'yacumama' ? (
-                <DelfinRosado className="w-24 h-20 opacity-40" />
-              ) : (
-                <div className="chulla-icon-big">👣🌲</div>
-              )}
+              <span className="video-art-icon-giant">{cuento.videoThumbnail}</span>
             </div>
 
             {/* Botón central de Play / Pausa */}
@@ -171,13 +199,16 @@ export function CuentosSelva() {
         {/* Detalle y texto completo del cuento */}
         <div className="cuento-texto-box">
           <div className="cuento-meta-header">
-            <span className={`pill-badge pill-${cuento.color}`}>Cuento Tradicional</span>
+            <span className={`pill-badge pill-${cuento.color}`}>{cuento.categoria}</span>
             <span className="cuento-duracion">⏱️ {cuento.duracion}</span>
           </div>
 
           <h3 className="cuento-titulo-main">{cuento.titulo}</h3>
           <p className="cuento-narrador-tag">
-            🗣️ Narrado por: <strong>{cuento.narrador}</strong>
+            🗣️ Narrado con amor por: <strong>{cuento.narrador}</strong>
+          </p>
+          <p className="cuento-personaje-desc">
+            🌟 <em>{cuento.personaje}</em>
           </p>
 
           <div className="cuento-frase-destacada">
@@ -196,7 +227,7 @@ export function CuentosSelva() {
           <div className="cuento-moraleja-card">
             <span className="mor-icon">💡</span>
             <div>
-              <strong>Lección para los jóvenes:</strong>
+              <strong>Lección para los jóvenes loretanos:</strong>
               <p>{cuento.moraleja}</p>
             </div>
           </div>
