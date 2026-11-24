@@ -1,6 +1,7 @@
 /* ========================================================
    SOY LORETANO - ESTILOS PRINCIPALES
-   Colores de la Selva: Verde, Amarillo, Marrón y Rosado
+   Enfocado en la Identidad y Orgullo de los Jóvenes de Iquitos
+   Paleta: Verde Selva, Amarillo Aguaje, Marrón Tierra y Rosado Bufeo
    ======================================================== */
 
 .loretano-app {
@@ -15,9 +16,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 2px solid var(--verde-borde);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 2.5px solid var(--verde-borde);
   box-shadow: var(--shadow-sm);
 }
 
@@ -50,37 +51,33 @@
   border: 1.5px solid var(--rosado-borde);
 }
 
-.logo-texts {
-  display: flex;
-  flex-direction: column;
-}
-
 .brand-title {
   font-family: var(--font-heading);
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: -0.5px;
-  background: linear-gradient(135deg, var(--verde-selva-dark) 0%, var(--verde-selva) 50%, var(--rosado-delfin) 100%);
+  background: linear-gradient(135deg, var(--verde-selva-dark) 0%, var(--verde-selva) 55%, var(--rosado-delfin) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .brand-tagline {
   font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--marron-tierra);
+  font-weight: 700;
+  color: var(--amarillo-sol);
+  text-transform: uppercase;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .nav-item {
-  padding: 0.5rem 0.85rem;
+  padding: 0.45rem 0.8rem;
   border-radius: var(--radius-full);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--texto-medio);
   display: inline-flex;
@@ -92,17 +89,27 @@
 .nav-item:hover {
   background: var(--verde-claro);
   color: var(--verde-selva-dark);
-  transform: translateY(-1px);
 }
 
 .nav-highlight {
   background: var(--amarillo-claro);
   color: var(--marron-tierra);
-  border: 1px solid var(--amarillo-borde);
+  border: 1.5px solid var(--amarillo-borde);
 }
 
 .nav-highlight:hover {
   background: var(--amarillo-sol);
+  color: var(--blanco);
+}
+
+.nav-orgullo {
+  background: var(--rosado-claro);
+  color: var(--rosado-intenso);
+  border: 1.5px solid var(--rosado-borde);
+}
+
+.nav-orgullo:hover {
+  background: var(--rosado-delfin);
   color: var(--blanco);
 }
 
@@ -112,16 +119,16 @@
   gap: 0.75rem;
 }
 
-/* Reproductor de sonido ambiental */
+/* Reproductor de Sonido */
 .sound-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.9rem;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
   background: var(--verde-claro);
   border: 1.5px solid var(--verde-borde);
   border-radius: var(--radius-full);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--verde-selva-dark);
   position: relative;
@@ -131,22 +138,20 @@
 .sound-btn:hover {
   background: var(--verde-hoja);
   color: var(--blanco);
-  border-color: var(--verde-hoja);
 }
 
 .sound-btn.active {
   background: linear-gradient(135deg, var(--verde-selva) 0%, var(--verde-selva-dark) 100%);
   color: var(--blanco);
-  border-color: var(--verde-selva-dark);
-  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
 }
 
 .sound-pulse {
   position: absolute;
   top: -2px;
   right: -2px;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   background: var(--rosado-delfin);
   border-radius: 50%;
   animation: pulse 1.5s infinite;
@@ -160,35 +165,34 @@
 
 .mobile-toggle {
   display: none;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: var(--verde-selva-dark);
   padding: 0.25rem 0.5rem;
 }
 
-/* ================= Hero Section ================= */
-.hero-section {
+/* ================= 1. SECCIÓN INICIO ================= */
+.inicio-section {
+  width: 100%;
+  padding: 3rem 1.25rem 2rem;
+  background: radial-gradient(circle at 80% 20%, rgba(254, 243, 199, 0.4) 0%, transparent 60%),
+              radial-gradient(circle at 10% 80%, rgba(253, 242, 248, 0.5) 0%, transparent 60%);
+}
+
+.inicio-hero-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 1.5rem 2.5rem;
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  align-items: center;
-  gap: 2.5rem;
-  position: relative;
-}
-
-.hero-content {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
 }
 
-.hero-badge {
+.inicio-header-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  align-self: flex-start;
-  padding: 0.4rem 1rem;
+  gap: 0.5rem;
+  padding: 0.45rem 1.15rem;
   background: var(--verde-claro);
   border: 1.5px solid var(--verde-borde);
   border-radius: var(--radius-full);
@@ -197,1049 +201,598 @@
   color: var(--verde-selva-dark);
 }
 
-.hero-main-title {
-  font-size: 4rem;
+.badge-pulse {
+  width: 8px;
+  height: 8px;
+  background: var(--verde-hoja);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+.inicio-mega-title {
+  font-size: 4.5rem;
   line-height: 1.05;
-  letter-spacing: -1.5px;
+  letter-spacing: -2px;
+  color: var(--verde-selva-dark);
   font-weight: 700;
 }
 
-.title-soy {
-  color: var(--amarillo-sol);
-  text-shadow: 2px 2px 0 var(--marron-tierra);
-}
-
-.title-loretano {
-  background: linear-gradient(135deg, var(--verde-selva-dark) 0%, var(--verde-selva) 55%, var(--rosado-delfin) 100%);
+.highlight-iquitos {
+  background: linear-gradient(135deg, var(--amarillo-sol) 0%, #D97706 50%, var(--rosado-delfin) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
-.hero-motto {
+.inicio-lema {
   font-family: var(--font-heading);
-  font-size: 1.65rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--marron-tierra);
   background: var(--amarillo-claro);
-  border-left: 5px solid var(--amarillo-sol);
-  padding: 0.6rem 1rem;
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
-  box-shadow: var(--shadow-sm);
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--amarillo-borde);
+  display: inline-block;
 }
 
-.hero-subtext {
-  font-size: 1.1rem;
+/* Manifiesto contra la vergüenza */
+.inicio-manifiesto-box {
+  background: var(--blanco);
+  border: 2px dashed var(--verde-selva);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2rem;
+  max-width: 850px;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: left;
+  box-shadow: var(--shadow-md);
+}
+
+.manifiesto-icon {
+  font-size: 2.5rem;
+  background: var(--verde-claro);
+  padding: 0.85rem;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.manifiesto-text h3 {
+  font-size: 1.35rem;
+  color: var(--verde-selva-dark);
+  margin-bottom: 0.35rem;
+}
+
+.manifiesto-text p {
+  font-size: 1.05rem;
   color: var(--texto-medio);
-  max-width: 580px;
 }
 
-.hero-cta-group {
+.manifiesto-text strong {
+  color: var(--rosado-intenso);
+}
+
+.inicio-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.85rem;
+  justify-content: center;
+  gap: 1rem;
   margin-top: 0.5rem;
 }
 
-.btn-hero-primary {
-  padding: 0.85rem 1.6rem;
+.btn-jugar-inicio {
+  padding: 0.9rem 1.8rem;
   background: linear-gradient(135deg, var(--verde-selva) 0%, var(--verde-selva-dark) 100%);
   color: var(--blanco);
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   border-radius: var(--radius-full);
   box-shadow: 0 6px 18px rgba(5, 150, 105, 0.35);
   transition: all 0.25s ease;
 }
 
-.btn-hero-primary:hover {
-  transform: translateY(-2px);
+.btn-jugar-inicio:hover {
+  transform: translateY(-3px);
   box-shadow: 0 10px 24px rgba(5, 150, 105, 0.45);
 }
 
-.btn-hero-secondary {
-  padding: 0.85rem 1.6rem;
-  background: var(--rosado-claro);
-  color: var(--rosado-intenso);
-  border: 2px solid var(--rosado-borde);
-  font-size: 1rem;
+.btn-explorar-inicio {
+  padding: 0.9rem 1.8rem;
+  background: var(--amarillo-claro);
+  color: var(--marron-tierra);
+  border: 2px solid var(--amarillo-borde);
+  font-size: 1.05rem;
   font-weight: 700;
   border-radius: var(--radius-full);
   transition: all 0.25s ease;
 }
 
-.btn-hero-secondary:hover {
-  background: var(--rosado-delfin);
-  color: var(--blanco);
-  border-color: var(--rosado-delfin);
-  transform: translateY(-2px);
-}
-
-/* Caja de frase típica interactiva */
-.frase-box {
-  background: var(--blanco);
-  border: 2px dashed var(--verde-hoja);
-  border-radius: var(--radius-lg);
-  padding: 1.15rem 1.35rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  box-shadow: var(--shadow-md);
-  position: relative;
-}
-
-.frase-badge {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--verde-selva);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.frase-text {
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--verde-selva-dark);
-}
-
-.frase-significado {
-  font-size: 0.95rem;
-  color: var(--texto-medio);
-}
-
-.btn-nueva-frase {
-  align-self: flex-start;
-  margin-top: 0.35rem;
-  padding: 0.4rem 0.9rem;
-  background: var(--amarillo-claro);
-  color: var(--marron-tierra);
-  border: 1px solid var(--amarillo-borde);
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
-  font-weight: 700;
-  transition: all 0.2s ease;
-}
-
-.btn-nueva-frase:hover {
+.btn-explorar-inicio:hover {
   background: var(--amarillo-sol);
   color: var(--blanco);
+  border-color: var(--amarillo-sol);
+  transform: translateY(-3px);
 }
 
-/* Galería de dibujos amazónicos en el Hero */
-.hero-drawings-showcase {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-}
-
-.drawing-card {
-  background: var(--blanco);
-  border-radius: var(--radius-lg);
-  padding: 1.25rem;
+/* Galería Visual / Foto Ilustrada de Iquitos */
+.foto-iquitos-showcase {
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  box-shadow: var(--shadow-md);
-  transition: all 0.3s ease;
-  border: 2px solid transparent;
-}
-
-.drawing-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
-}
-
-.card-delfin {
-  background: linear-gradient(180deg, var(--rosado-claro) 0%, #FFFFFF 100%);
-  border-color: var(--rosado-borde);
-}
-
-.card-guacamayo {
-  background: linear-gradient(180deg, var(--amarillo-claro) 0%, #FFFFFF 100%);
-  border-color: var(--amarillo-borde);
-}
-
-.card-victoria {
-  background: linear-gradient(180deg, var(--verde-claro) 0%, #FFFFFF 100%);
-  border-color: var(--verde-borde);
-}
-
-.card-mototaxi {
-  background: linear-gradient(180deg, var(--marron-claro) 0%, #FFFFFF 100%);
-  border-color: var(--marron-borde);
-}
-
-.drawing-label {
-  margin-top: 0.65rem;
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--texto-oscuro);
-}
-
-/* Animación sutil del delfín */
-.animate-dolphin {
-  animation: floatDolphin 3.5s ease-in-out infinite;
-  transform-origin: center;
-}
-
-@keyframes floatDolphin {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-6px) rotate(-2deg); }
-}
-
-/* ================= Divisor Kené ================= */
-.kene-divider-wrapper {
-  width: 100%;
-  height: 35px;
-  overflow: hidden;
-  margin: 1.5rem 0;
-  opacity: 0.85;
-}
-
-.kene-divider-svg {
-  width: 100%;
-  height: 100%;
-}
-
-/* ================= Facts Strip ================= */
-.facts-strip {
-  max-width: 1200px;
-  margin: 1rem auto 2.5rem;
-  padding: 0 1.25rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
 }
 
-.fact-item {
+.foto-card-main {
+  position: relative;
+  height: 320px;
+  background: linear-gradient(180deg, rgba(6, 78, 59, 0.4) 0%, rgba(6, 78, 59, 0.85) 100%),
+              radial-gradient(ellipse at center, #0F766E 0%, #064E3B 100%);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 2.25rem;
+  text-align: left;
+  border: 3px solid var(--verde-borde);
+  box-shadow: var(--shadow-lg);
+}
+
+.foto-overlay {
+  color: var(--blanco);
+  max-width: 650px;
+  z-index: 2;
+}
+
+.foto-tag {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  background: var(--amarillo-sol);
+  color: var(--blanco);
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.65rem;
+}
+
+.foto-overlay h3 {
+  font-size: 2.2rem;
+  color: #FFFFFF;
+  margin-bottom: 0.5rem;
+}
+
+.foto-overlay p {
+  font-size: 1.05rem;
+  color: #D1FAE5;
+}
+
+.foto-art-float {
+  position: absolute;
+  z-index: 1;
+}
+
+.float-delfin {
+  right: 40px;
+  bottom: 25px;
+}
+
+.float-guacamayo {
+  right: 180px;
+  top: 20px;
+}
+
+.mini-fotos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.mini-foto-card {
   background: var(--blanco);
-  border: 1.5px solid var(--verde-borde);
+  border: 2px solid var(--verde-borde);
   border-radius: var(--radius-md);
-  padding: 1rem 1.15rem;
+  padding: 1.15rem;
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 1rem;
+  text-align: left;
   box-shadow: var(--shadow-sm);
   transition: transform 0.2s ease;
 }
 
-.fact-item:hover {
+.mini-foto-card:hover {
   transform: translateY(-2px);
-  border-color: var(--verde-hoja);
-}
-
-.fact-icon {
-  font-size: 1.8rem;
-}
-
-.fact-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.fact-info strong {
-  font-size: 0.95rem;
-  color: var(--verde-selva-dark);
-}
-
-.fact-info span {
-  font-size: 0.78rem;
-  color: var(--texto-medio);
-}
-
-/* ================= Estructura General de Secciones ================= */
-.section-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3.5rem 1.25rem;
-  width: 100%;
-}
-
-.bg-warm-forest {
-  background: linear-gradient(180deg, #F6FBF7 0%, #FFFFFF 100%);
-  border-radius: var(--radius-lg);
-}
-
-.section-header {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto 2.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.65rem;
-}
-
-.badge-tag {
-  display: inline-block;
-  padding: 0.35rem 0.9rem;
-  border-radius: var(--radius-full);
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.badge-tag.verde {
-  background: var(--verde-claro);
-  color: var(--verde-selva-dark);
-  border: 1px solid var(--verde-borde);
-}
-
-.badge-tag.amarillo {
-  background: var(--amarillo-claro);
-  color: var(--marron-tierra);
-  border: 1px solid var(--amarillo-borde);
-}
-
-.badge-tag.marron {
-  background: var(--marron-claro);
-  color: var(--marron-tierra);
-  border: 1px solid var(--marron-borde);
-}
-
-.badge-tag.rosado {
-  background: var(--rosado-claro);
-  color: var(--rosado-intenso);
-  border: 1px solid var(--rosado-borde);
-}
-
-.section-title {
-  font-size: 2.35rem;
-  line-height: 1.2;
-  color: var(--verde-selva-dark);
-}
-
-.section-desc {
-  font-size: 1.05rem;
-  color: var(--texto-medio);
-}
-
-/* ================= Diccionario Charapa ================= */
-.diccionario-controls {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  margin-bottom: 2rem;
-}
-
-.search-bar-wrap {
-  position: relative;
-  max-width: 600px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.search-icon {
-  position: absolute;
-  left: 1.15rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.1rem;
-  color: var(--texto-claro);
-}
-
-.search-input {
-  width: 100%;
-  padding: 0.9rem 2.8rem 0.9rem 3rem;
-  border: 2px solid var(--verde-borde);
-  border-radius: var(--radius-full);
-  font-family: var(--font-body);
-  font-size: 1rem;
-  background: var(--blanco);
-  color: var(--texto-oscuro);
-  outline: none;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.2s ease;
-}
-
-.search-input:focus {
   border-color: var(--verde-selva);
-  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
 }
 
-.clear-search {
-  position: absolute;
-  right: 1.15rem;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1rem;
-  color: var(--texto-claro);
-  padding: 0.2rem;
-}
-
-.category-chips {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.chip-btn {
-  padding: 0.45rem 1rem;
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
-  font-weight: 600;
-  background: var(--blanco);
-  color: var(--texto-medio);
-  border: 1.5px solid #E2E8F0;
-  transition: all 0.2s ease;
-}
-
-.chip-btn:hover {
-  background: var(--verde-claro);
-  border-color: var(--verde-borde);
-  color: var(--verde-selva-dark);
-}
-
-.chip-btn.active {
-  background: var(--verde-selva);
-  color: var(--blanco);
-  border-color: var(--verde-selva);
-  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
-}
-
-.palabras-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.25rem;
-}
-
-.palabra-card {
-  background: var(--blanco);
-  border-radius: var(--radius-lg);
-  padding: 1.35rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  box-shadow: var(--shadow-md);
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.palabra-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.palabra-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.card-hint {
-  font-size: 0.72rem;
-  color: var(--verde-selva);
-  font-weight: 600;
-}
-
-.cat-pill {
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-full);
-}
-
-.pill-verde { background: var(--verde-claro); color: var(--verde-selva-dark); }
-.pill-amarillo { background: var(--amarillo-claro); color: var(--marron-tierra); }
-.pill-marron { background: var(--marron-claro); color: var(--marron-tierra); }
-.pill-rosado { background: var(--rosado-claro); color: var(--rosado-intenso); }
-
-.border-verde { border-color: var(--verde-borde); }
-.border-amarillo { border-color: var(--amarillo-borde); }
-.border-marron { border-color: var(--marron-borde); }
-.border-rosado { border-color: var(--rosado-borde); }
-
-.palabra-term {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--verde-selva-dark);
-}
-
-.palabra-def {
-  font-size: 0.95rem;
-  color: var(--texto-medio);
-  line-height: 1.5;
-}
-
-.palabra-ejemplo {
-  margin-top: auto;
-  padding-top: 0.65rem;
-  border-top: 1px dashed #E2E8F0;
-  font-size: 0.88rem;
-  color: var(--marron-tierra);
-  position: relative;
-  padding-left: 1.1rem;
-}
-
-.quote-icon {
-  position: absolute;
-  left: 0;
-  top: 0.5rem;
-  font-size: 1.4rem;
-  color: var(--amarillo-sol);
-  line-height: 1;
-}
-
-/* Modal de detalle de palabra */
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(6, 78, 59, 0.4);
-  backdrop-filter: blur(4px);
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-}
-
-.modal-content {
-  background: var(--blanco);
-  border-radius: var(--radius-lg);
-  max-width: 500px;
-  width: 100%;
-  padding: 2rem;
-  box-shadow: var(--shadow-lg);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.modal-close {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  font-size: 1.25rem;
-  color: var(--texto-claro);
-  padding: 0.25rem;
-}
-
-.modal-title {
-  font-size: 2rem;
-  color: var(--verde-selva-dark);
-}
-
-.modal-def {
-  font-size: 1.1rem;
-  color: var(--texto-medio);
-}
-
-.modal-ejemplo-box {
-  background: var(--amarillo-claro);
-  border-left: 4px solid var(--amarillo-sol);
-  padding: 1rem;
-  border-radius: var(--radius-sm);
-}
-
-.box-title {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--marron-tierra);
-}
-
-.box-text {
-  font-size: 1.05rem;
-  color: var(--texto-oscuro);
-  font-style: italic;
-  margin-top: 0.25rem;
-}
-
-.modal-actions {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-}
-
-.btn-primary {
-  flex: 1;
-  padding: 0.75rem 1.25rem;
-  background: var(--verde-selva);
-  color: var(--blanco);
-  border-radius: var(--radius-full);
-  font-weight: 700;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
-}
-
-.btn-primary:hover {
-  background: var(--verde-selva-dark);
-}
-
-.btn-secondary {
-  padding: 0.75rem 1.25rem;
-  background: #F1F5F9;
-  color: var(--texto-medio);
-  border-radius: var(--radius-full);
-  font-weight: 700;
-  font-size: 0.95rem;
-}
-
-.btn-secondary:hover {
-  background: #E2E8F0;
-}
-
-.no-results {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 3rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.no-res-icon {
-  font-size: 3rem;
-}
-
-/* ================= Gastronomía Loretana ================= */
-.platos-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.65rem;
-  margin-bottom: 2rem;
-}
-
-.tab-plato-btn {
-  padding: 0.65rem 1.15rem;
-  background: var(--blanco);
-  border-radius: var(--radius-full);
-  border: 2px solid #E2E8F0;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--texto-medio);
-  box-shadow: var(--shadow-sm);
-  transition: all 0.2s ease;
-}
-
-.tab-plato-btn:hover {
-  transform: translateY(-2px);
-}
-
-.tab-plato-btn.active {
-  background: var(--verde-selva-dark);
-  color: var(--blanco);
-  border-color: var(--verde-selva-dark);
-  box-shadow: 0 4px 12px rgba(6, 78, 59, 0.25);
-}
-
-.tab-emoji {
-  font-size: 1.15rem;
-}
-
-.plato-featured-card {
-  background: var(--blanco);
-  border-radius: var(--radius-lg);
-  padding: 2.25rem;
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 2.5rem;
-  box-shadow: var(--shadow-lg);
-  border: 2.5px solid var(--verde-borde);
-  margin-bottom: 2.5rem;
-}
-
-.plato-card-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  background: #FAFAF9;
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-}
-
-.plato-illustration-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 120px;
-}
-
-.plato-big-emoji {
-  font-size: 5rem;
-}
-
-.plato-apodo {
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 700;
-  padding: 0.35rem 0.85rem;
-  border-radius: var(--radius-full);
-}
-
-.badge-verde { background: var(--verde-claro); color: var(--verde-selva-dark); }
-.badge-amarillo { background: var(--amarillo-claro); color: var(--marron-tierra); }
-.badge-rosado { background: var(--rosado-claro); color: var(--rosado-intenso); }
-.badge-marron { background: var(--marron-claro); color: var(--marron-tierra); }
-
-.plato-card-right {
-  display: flex;
-  flex-direction: column;
-  gap: 1.15rem;
-}
-
-.plato-title-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.plato-nombre {
-  font-size: 2rem;
-  color: var(--verde-selva-dark);
-}
-
-.plato-tag-region {
-  background: var(--amarillo-sol);
-  color: var(--blanco);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-full);
-}
-
-.plato-desc {
-  font-size: 1.05rem;
-  color: var(--texto-medio);
-}
-
-.plato-ingredientes-section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.ingredientes-title {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--marron-tierra);
-}
-
-.ingredientes-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.ing-chip {
-  background: var(--verde-claro);
-  color: var(--verde-selva-dark);
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-full);
-  border: 1px solid var(--verde-borde);
-}
-
-.plato-secreto-box {
-  background: var(--marron-claro);
-  border-left: 4px solid var(--marron-tierra);
-  padding: 1rem;
-  border-radius: var(--radius-sm);
-  display: flex;
-  gap: 0.75rem;
-  align-items: flex-start;
-}
-
-.secreto-icon {
-  font-size: 1.4rem;
-}
-
-.secreto-text strong {
-  color: var(--marron-tierra);
-  font-size: 0.9rem;
-}
-
-.secreto-text p {
-  color: var(--texto-oscuro);
-  font-size: 0.95rem;
-  margin-top: 0.15rem;
-}
-
-.todos-platos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.25rem;
-}
-
-.mini-plato-card {
-  background: var(--blanco);
-  border-radius: var(--radius-md);
-  padding: 1.25rem;
-  border: 1.5px solid #E2E8F0;
-  box-shadow: var(--shadow-sm);
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  transition: all 0.2s ease;
-}
-
-.mini-plato-card:hover, .mini-plato-card.active-mini {
-  border-color: var(--verde-selva);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-}
-
-.mini-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.mini-emoji {
-  font-size: 1.6rem;
-}
-
-.mini-pill {
-  font-size: 0.7rem;
-  font-weight: 700;
-  padding: 0.2rem 0.5rem;
-  border-radius: var(--radius-full);
-}
-
-.mini-title {
-  font-size: 1.1rem;
-  color: var(--verde-selva-dark);
-}
-
-.mini-snippet {
-  font-size: 0.85rem;
-  color: var(--texto-medio);
-}
-
-.mini-link {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--verde-selva);
-  margin-top: auto;
-}
-
-/* ================= Leyendas Amazónicas ================= */
-.leyendas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-}
-
-.leyenda-card {
-  background: var(--blanco);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem;
-  box-shadow: var(--shadow-md);
-  border: 2px solid transparent;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  transition: all 0.3s ease;
-}
-
-.leyenda-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.leyenda-top {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.leyenda-illustration-box, .leyenda-emoji-box {
-  width: 80px;
-  height: 80px;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #F8FAFC;
-  border: 1px solid #E2E8F0;
-  flex-shrink: 0;
-}
-
-.leyenda-emoji-box {
+.mini-icon {
   font-size: 2.2rem;
 }
 
-.leyenda-titulo {
-  font-size: 1.35rem;
+.mini-info strong {
+  display: block;
+  font-size: 1rem;
   color: var(--verde-selva-dark);
-  margin-top: 0.25rem;
 }
 
-.leyenda-subtitulo {
+.mini-info span {
+  font-size: 0.85rem;
+  color: var(--texto-medio);
+}
+
+/* Contadores de Identidad */
+.contadores-identidad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 1rem;
+}
+
+.contador-item {
+  background: var(--blanco);
+  border: 2px solid var(--amarillo-borde);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.num-contador {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--verde-selva-dark);
+}
+
+.lbl-contador {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--marron-tierra);
 }
 
-.leyenda-historia {
+/* ================= 2. SECCIÓN CUENTOS DE LA SELVA ================= */
+.cuentos-tabs-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-cuento-tab {
+  background: var(--blanco);
+  border: 2.5px solid #E2E8F0;
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+}
+
+.btn-cuento-tab:hover {
+  transform: translateY(-2px);
+}
+
+.btn-cuento-tab.active {
+  border-color: var(--verde-selva-dark);
+  background: var(--verde-claro);
+  box-shadow: var(--shadow-md);
+}
+
+.cuento-tab-icon {
+  font-size: 2rem;
+}
+
+.cuento-tab-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.cuento-tab-text strong {
+  font-size: 1.15rem;
+  color: var(--verde-selva-dark);
+}
+
+.cuento-tab-text small {
+  font-size: 0.85rem;
+  color: var(--marron-tierra);
+  font-weight: 600;
+}
+
+/* Pantalla de Video del Abuelito */
+.video-cuento-container {
+  background: var(--blanco);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 2.5px solid var(--verde-borde);
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.video-screen {
+  background: #0B1E16;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 420px;
+}
+
+.video-ambient-bg {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+}
+
+.video-watermark {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  color: #FFF;
+  font-size: 0.78rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.live-dot {
+  color: #EF4444;
+  font-size: 1.1rem;
+  animation: pulse 1s infinite;
+}
+
+.abuelito-avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.abuelito-avatar.hablando {
+  animation: floatDolphin 2s infinite ease-in-out;
+}
+
+.avatar-face {
+  font-size: 6rem;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
+.avatar-fogon {
+  font-size: 2rem;
+}
+
+.video-art-bg {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  opacity: 0.3;
+}
+
+.chulla-icon-big {
+  font-size: 3.5rem;
+}
+
+.btn-play-center {
+  position: absolute;
+  font-size: 2rem;
+  background: rgba(245, 158, 11, 0.95);
+  color: #FFF;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(245, 158, 11, 0.5);
+  transition: all 0.2s ease;
+  z-index: 3;
+}
+
+.btn-play-center:hover {
+  transform: scale(1.1);
+  background: var(--amarillo-sol);
+}
+
+.video-controls-bar {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-control-play {
+  color: #FFF;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+}
+
+.video-time-track {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.video-progress {
+  height: 100%;
+  background: var(--amarillo-sol);
+  border-radius: var(--radius-full);
+}
+
+.video-time-label {
+  color: #E2E8F0;
+  font-size: 0.8rem;
+  font-family: monospace;
+}
+
+.btn-voz-narrador {
+  color: #FFF;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  background: var(--rosado-delfin);
+  border-radius: var(--radius-full);
+  transition: all 0.2s ease;
+}
+
+.btn-voz-narrador.active {
+  background: var(--verde-hoja);
+}
+
+/* Texto del Cuento */
+.cuento-texto-box {
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.cuento-meta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cuento-titulo-main {
+  font-size: 1.8rem;
+  color: var(--verde-selva-dark);
+}
+
+.cuento-narrador-tag {
+  font-size: 0.95rem;
+  color: var(--marron-tierra);
+}
+
+.cuento-frase-destacada {
+  background: var(--amarillo-claro);
+  border-left: 4px solid var(--amarillo-sol);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
   font-size: 0.98rem;
+  color: var(--marron-tierra);
+  position: relative;
+}
+
+.quote-badge {
+  font-size: 1.8rem;
+  color: var(--amarillo-sol);
+  line-height: 0.8;
+  margin-right: 0.35rem;
+}
+
+.cuento-parrafos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.cuento-p {
+  font-size: 1.05rem;
   color: var(--texto-medio);
   line-height: 1.6;
 }
 
-.btn-toggle-historia {
-  align-self: flex-start;
-  font-size: 0.85rem;
+.p-num {
   font-weight: 700;
   color: var(--verde-selva);
-  padding: 0.25rem 0;
 }
 
-.btn-toggle-historia:hover {
-  text-decoration: underline;
-}
-
-.leyenda-advertencia {
-  background: var(--amarillo-claro);
-  border-left: 3px solid var(--amarillo-sol);
-  padding: 0.75rem 0.9rem;
+.cuento-moraleja-card {
+  background: var(--verde-claro);
+  border-left: 4px solid var(--verde-selva);
+  padding: 1rem;
   border-radius: var(--radius-sm);
   display: flex;
-  gap: 0.6rem;
+  gap: 0.75rem;
   align-items: flex-start;
-  font-size: 0.88rem;
-  color: var(--texto-oscuro);
   margin-top: auto;
 }
 
-.adv-icon {
-  font-size: 1.1rem;
+.mor-icon {
+  font-size: 1.4rem;
 }
 
-/* ================= Lugares de Iquitos ================= */
-.mototaxi-banner {
-  background: linear-gradient(135deg, var(--amarillo-claro) 0%, #FFFFFF 100%);
-  border: 2px solid var(--amarillo-borde);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
+.cuento-moraleja-card strong {
+  color: var(--verde-selva-dark);
+  font-size: 0.9rem;
+}
+
+.cuento-moraleja-card p {
+  color: var(--texto-oscuro);
+  font-size: 0.95rem;
+}
+
+/* ================= 3. SECCIÓN RECETAS LORETANAS ================= */
+.recetas-nav-pills {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-bottom: 2.5rem;
-  box-shadow: var(--shadow-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
 }
 
-.banner-text h3 {
-  font-size: 1.5rem;
-  color: var(--marron-tierra);
-  margin-bottom: 0.5rem;
-}
-
-.banner-text p {
-  font-size: 1rem;
-  color: var(--texto-medio);
-  max-width: 650px;
-}
-
-.lugares-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.5rem;
-}
-
-.lugar-card {
+.btn-receta-pill {
+  padding: 0.75rem 1.4rem;
   background: var(--blanco);
-  border-radius: var(--radius-lg);
-  padding: 1.5rem;
-  box-shadow: var(--shadow-md);
-  border: 2px solid transparent;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  border: 2px solid #E2E8F0;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--texto-medio);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
   transition: all 0.25s ease;
 }
 
-.lugar-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-hover);
+.btn-receta-pill:hover {
+  transform: translateY(-2px);
 }
 
-.lugar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.lugar-distrito {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--marron-tierra);
-}
-
-.pill-badge {
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 0.2rem 0.6rem;
-  border-radius: var(--radius-full);
-}
-
-.lugar-nombre {
-  font-size: 1.35rem;
-  color: var(--verde-selva-dark);
-}
-
-.lugar-desc {
-  font-size: 0.95rem;
-  color: var(--texto-medio);
-}
-
-.lugar-destacado {
-  background: var(--verde-claro);
-  border-left: 3px solid var(--verde-selva);
-  padding: 0.75rem 0.9rem;
-  border-radius: var(--radius-sm);
-  display: flex;
-  gap: 0.5rem;
-  align-items: flex-start;
-  font-size: 0.85rem;
-  color: var(--verde-selva-dark);
-  margin-top: auto;
-}
-
-.guacamayo-callout {
-  margin-top: 2.5rem;
-  background: var(--blanco);
-  border: 2px solid var(--verde-borde);
-  border-radius: var(--radius-lg);
-  padding: 1.5rem 2rem;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+.btn-receta-pill.active {
+  background: var(--verde-selva-dark);
+  color: var(--blanco);
+  border-color: var(--verde-selva-dark);
   box-shadow: var(--shadow-md);
 }
 
-.callout-content h4 {
+.receta-emoji {
   font-size: 1.3rem;
-  color: var(--verde-selva-dark);
-  margin-bottom: 0.35rem;
 }
 
-.callout-content p {
-  font-size: 1rem;
-  color: var(--texto-medio);
-}
-
-/* ================= Quiz Interactivo ================= */
-.quiz-card {
-  max-width: 680px;
-  margin: 0 auto;
+.receta-card-interactive {
   background: var(--blanco);
   border-radius: var(--radius-lg);
   padding: 2.5rem;
@@ -1247,10 +800,372 @@
   border: 2.5px solid var(--verde-borde);
   display: flex;
   flex-direction: column;
+  gap: 2rem;
+}
+
+.receta-hero-header {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 2px dashed #E2E8F0;
+}
+
+.receta-title {
+  font-size: 2.2rem;
+  color: var(--verde-selva-dark);
+  margin: 0.5rem 0;
+}
+
+.receta-historia {
+  font-size: 1.05rem;
+  font-style: italic;
+  color: var(--marron-tierra);
+  margin-bottom: 1rem;
+}
+
+.receta-badges-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.meta-badge {
+  background: var(--verde-claro);
+  border: 1px solid var(--verde-borde);
+  color: var(--verde-selva-dark);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.receta-art-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tacacho-giant-art {
+  font-size: 4rem;
+}
+
+/* Checklist de ingredientes */
+.ingredientes-checklist-box {
+  background: #F8FAFC;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.checklist-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--verde-selva-dark);
+  margin-bottom: 1rem;
+}
+
+.ingredientes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.ingrediente-item {
+  background: var(--blanco);
+  border: 1.5px solid #E2E8F0;
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--texto-oscuro);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ingrediente-item:hover {
+  border-color: var(--verde-selva);
+}
+
+.ingrediente-item.completado {
+  background: var(--verde-claro);
+  border-color: var(--verde-borde);
+  color: var(--verde-selva-dark);
+  text-decoration: line-through;
+  opacity: 0.85;
+}
+
+.check-box-circle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--verde-selva);
+}
+
+/* Módulo Paso a Paso */
+.paso-a-paso-modulo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pasos-stepper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.pasos-stepper-header h4 {
+  font-size: 1.25rem;
+  color: var(--verde-selva-dark);
+}
+
+.stepper-pills {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.stepper-btn {
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid #E2E8F0;
+  background: var(--blanco);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--texto-medio);
+}
+
+.stepper-btn.active-step {
+  background: var(--amarillo-sol);
+  color: var(--blanco);
+  border-color: var(--amarillo-sol);
+}
+
+.stepper-btn.step-done {
+  background: var(--verde-claro);
+  color: var(--verde-selva-dark);
+  border-color: var(--verde-borde);
+}
+
+.paso-actual-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAFCFA 100%);
+  border: 2px solid var(--verde-borde);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.paso-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.paso-contador-badge {
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: var(--amarillo-claro);
+  color: var(--marron-tierra);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+}
+
+.btn-check-paso {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--verde-borde);
+  color: var(--texto-medio);
+}
+
+.btn-check-paso.listo {
+  background: var(--verde-selva);
+  color: var(--blanco);
+  border-color: var(--verde-selva);
+}
+
+.paso-titulo {
+  font-size: 1.55rem;
+  color: var(--verde-selva-dark);
+}
+
+.paso-detalle {
+  font-size: 1.1rem;
+  color: var(--texto-medio);
+  line-height: 1.6;
+}
+
+.paso-tip-box {
+  background: var(--amarillo-claro);
+  border-left: 4px solid var(--amarillo-sol);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+}
+
+.tip-icon {
+  font-size: 1.8rem;
+}
+
+.paso-tip-box strong {
+  color: var(--marron-tierra);
+  font-size: 0.95rem;
+}
+
+.paso-tip-box p {
+  color: var(--texto-oscuro);
+  font-size: 0.98rem;
+  margin-top: 0.2rem;
+}
+
+.paso-navegacion-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.btn-paso-nav {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: 2px solid #E2E8F0;
+  background: var(--blanco);
+  color: var(--texto-medio);
+  transition: all 0.2s ease;
+}
+
+.btn-paso-nav:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-paso-siguiente {
+  background: var(--verde-selva);
+  color: var(--blanco);
+  border-color: var(--verde-selva);
+}
+
+.btn-paso-siguiente:hover:not(:disabled) {
+  background: var(--verde-selva-dark);
+}
+
+.btn-paso-siguiente.listo-total {
+  background: var(--amarillo-sol);
+  border-color: var(--amarillo-sol);
+}
+
+/* ================= 4. SECCIÓN JUEGO: ¿CUÁNTO SABES DE LORETO? ================= */
+.alerta-nivel-subido {
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+  background: linear-gradient(135deg, var(--amarillo-sol) 0%, #D97706 100%);
+  color: #FFF;
+  padding: 1.15rem 1.75rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.alerta-icon {
+  font-size: 2.5rem;
+}
+
+.alerta-text strong {
+  font-size: 1.15rem;
+  letter-spacing: 0.5px;
+}
+
+.alerta-text p {
+  font-size: 1.05rem;
+}
+
+.alerta-text span {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.juego-board-container {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--blanco);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-lg);
+  border: 2.5px solid var(--verde-borde);
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
-.quiz-progress-bar-wrap {
+.juego-stats-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stat-nivel-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--verde-claro);
+  border: 1.5px solid var(--verde-borde);
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--radius-full);
+}
+
+.insignia-badge {
+  font-size: 1.6rem;
+}
+
+.stat-nivel-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.nivel-lbl {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--verde-selva);
+  text-transform: uppercase;
+}
+
+.stat-puntos-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.puntos-lbl {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--texto-claro);
+  text-transform: uppercase;
+}
+
+.puntos-val {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--marron-tierra);
+}
+
+.juego-progress-line {
   width: 100%;
   height: 8px;
   background: #E2E8F0;
@@ -1258,61 +1173,68 @@
   overflow: hidden;
 }
 
-.quiz-progress-bar {
+.juego-progress-fill {
   height: 100%;
   background: linear-gradient(90deg, var(--amarillo-sol) 0%, var(--verde-selva) 100%);
   border-radius: var(--radius-full);
   transition: width 0.3s ease;
 }
 
-.quiz-top-info {
+.pregunta-activa-card {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.88rem;
-  color: var(--texto-medio);
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
-.puntos-temporales strong {
+.pregunta-top-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--texto-claro);
+}
+
+.meta-puntos-posibles {
   color: var(--verde-selva);
 }
 
-.quiz-pregunta-texto {
-  font-size: 1.45rem;
-  line-height: 1.3;
+.pregunta-enunciado {
+  font-size: 1.55rem;
+  line-height: 1.35;
   color: var(--verde-selva-dark);
 }
 
-.quiz-opciones-list {
+.opciones-grid-juego {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
-.quiz-opcion-btn {
-  padding: 1rem 1.25rem;
+.btn-opcion-juego {
+  padding: 1.1rem 1.25rem;
   border-radius: var(--radius-md);
   border: 2px solid #E2E8F0;
   background: var(--blanco);
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  font-size: 1rem;
+  text-align: left;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--texto-oscuro);
-  text-align: left;
+  cursor: pointer;
   transition: all 0.2s ease;
 }
 
-.quiz-opcion-btn:hover:not(:disabled) {
+.btn-opcion-juego:hover:not(:disabled) {
   border-color: var(--verde-selva);
   background: var(--verde-claro);
   transform: translateX(4px);
 }
 
-.opcion-letra {
-  width: 28px;
-  height: 28px;
+.opcion-circulo {
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background: #F1F5F9;
   display: flex;
@@ -1324,49 +1246,42 @@
   flex-shrink: 0;
 }
 
-.opcion-texto {
+.opcion-texto-juego {
   flex: 1;
 }
 
-.quiz-opcion-btn.opcion-correcta {
+.btn-opcion-juego.correcta {
   background: #DEF7EC;
   border-color: var(--verde-hoja);
   color: var(--verde-selva-dark);
 }
 
-.quiz-opcion-btn.opcion-correcta .opcion-letra {
+.btn-opcion-juego.correcta .opcion-circulo {
   background: var(--verde-selva);
-  color: var(--blanco);
+  color: #FFF;
 }
 
-.quiz-opcion-btn.opcion-incorrecta {
+.btn-opcion-juego.incorrecta {
   background: #FDE8E8;
   border-color: #F87171;
   color: #991B1B;
 }
 
-.quiz-opcion-btn.opcion-incorrecta .opcion-letra {
+.btn-opcion-juego.incorrecta .opcion-circulo {
   background: #DC2626;
-  color: var(--blanco);
+  color: #FFF;
 }
 
-.quiz-opcion-btn.opcion-opaca {
-  opacity: 0.5;
+.btn-opcion-juego.opaca {
+  opacity: 0.45;
 }
 
-.check-icon {
-  color: var(--verde-selva);
+.signo-res {
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
-.cross-icon {
-  color: #DC2626;
-  font-weight: 900;
-  font-size: 1.2rem;
-}
-
-.quiz-retroalimentacion {
+.retroalimentacion-box {
   background: var(--amarillo-claro);
   border: 1.5px solid var(--amarillo-borde);
   border-radius: var(--radius-md);
@@ -1376,28 +1291,22 @@
   gap: 1rem;
 }
 
-.retro-texto {
-  font-size: 1rem;
+.retro-explicacion {
+  font-size: 1.05rem;
   color: var(--texto-oscuro);
 }
 
-.btn-siguiente-quiz {
+.btn-continuar-juego {
   align-self: flex-end;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.6rem;
   background: var(--verde-selva);
   color: var(--blanco);
   font-weight: 700;
   border-radius: var(--radius-full);
   font-size: 0.95rem;
-  transition: all 0.2s ease;
 }
 
-.btn-siguiente-quiz:hover {
-  background: var(--verde-selva-dark);
-  transform: translateY(-2px);
-}
-
-.quiz-resultado-final {
+.pantalla-victoria-card {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1406,43 +1315,532 @@
   padding: 1rem 0;
 }
 
-.resultado-art {
+.victoria-art {
   display: flex;
   justify-content: center;
 }
 
-.resultado-titulo {
-  font-size: 2rem;
+.victoria-badge {
+  background: var(--amarillo-claro);
+  border: 2px solid var(--amarillo-sol);
+  color: var(--marron-tierra);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.4rem 1.25rem;
+  border-radius: var(--radius-full);
+}
+
+.victoria-titulo {
+  font-size: 2.2rem;
   color: var(--verde-selva-dark);
 }
 
-.resultado-score-box {
-  background: var(--amarillo-claro);
-  border: 2px solid var(--amarillo-sol);
-  border-radius: var(--radius-md);
-  padding: 0.75rem 2rem;
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-}
-
-.score-number {
+.victoria-score-num {
   font-family: var(--font-heading);
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: var(--verde-selva-dark);
 }
 
-.score-total {
-  font-size: 1.1rem;
+.victoria-score-sub {
+  font-size: 1.05rem;
   color: var(--marron-tierra);
+  font-weight: 600;
+  display: block;
+}
+
+.victoria-mensaje {
+  font-size: 1.15rem;
+  color: var(--texto-medio);
+  max-width: 580px;
+}
+
+.victoria-diploma-box {
+  background: var(--verde-claro);
+  border: 2px dashed var(--verde-selva);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.75rem;
+  text-align: left;
+  max-width: 580px;
+}
+
+.victoria-diploma-box h4 {
+  font-size: 1.05rem;
+  color: var(--verde-selva-dark);
+  margin-bottom: 0.35rem;
+}
+
+.victoria-diploma-box p {
+  font-size: 1rem;
+  color: var(--texto-oscuro);
+  font-style: italic;
+}
+
+/* ================= 5. SECCIÓN YO SOY LORETANO (MURO) ================= */
+.btn-subir-foto-cta {
+  margin-top: 1rem;
+  padding: 0.85rem 1.8rem;
+  background: linear-gradient(135deg, var(--rosado-delfin) 0%, var(--rosado-intenso) 100%);
+  color: var(--blanco);
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  box-shadow: 0 6px 18px rgba(236, 72, 153, 0.35);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-subir-foto-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(236, 72, 153, 0.45);
+}
+
+.muro-publicaciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.muro-post-card {
+  background: var(--blanco);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  box-shadow: var(--shadow-md);
+  border: 2px solid #E2E8F0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+.muro-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--rosado-borde);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.post-avatar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.post-avatar-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.avatar-bg-verde { background: var(--verde-claro); }
+.avatar-bg-amarillo { background: var(--amarillo-claro); }
+.avatar-bg-rosado { background: var(--rosado-claro); }
+
+.post-nombre {
+  font-size: 1.05rem;
+  color: var(--verde-selva-dark);
+}
+
+.post-barrio {
+  font-size: 0.78rem;
+  color: var(--texto-claro);
   font-weight: 600;
 }
 
-.resultado-mensaje {
-  font-size: 1.1rem;
+.post-cat-badge {
+  background: var(--amarillo-claro);
+  color: var(--marron-tierra);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.post-foto-wrap {
+  width: 100%;
+  height: 240px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #000;
+}
+
+.post-foto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-foto-placeholder {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, var(--verde-claro) 0%, var(--amarillo-claro) 100%);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.place-icon {
+  font-size: 3rem;
+}
+
+.place-lbl {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--verde-selva-dark);
+}
+
+.post-mensaje {
+  font-size: 1.05rem;
+  color: var(--texto-oscuro);
+  line-height: 1.55;
+  font-style: italic;
+}
+
+.post-footer-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px dashed #E2E8F0;
+}
+
+.btn-like-post {
+  padding: 0.4rem 0.9rem;
+  background: var(--rosado-claro);
+  border: 1px solid var(--rosado-borde);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--rosado-intenso);
+  transition: all 0.2s ease;
+}
+
+.btn-like-post:hover, .btn-like-post.liked {
+  background: var(--rosado-delfin);
+  color: var(--blanco);
+  border-color: var(--rosado-delfin);
+}
+
+.post-verificado {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--verde-selva);
+}
+
+/* Modal de subida de foto */
+.modal-subir {
+  max-width: 560px;
+}
+
+.modal-header-subir h3 {
+  font-size: 1.75rem;
+  color: var(--verde-selva-dark);
+  margin-top: 0.35rem;
+}
+
+.modal-header-subir p {
+  font-size: 0.95rem;
   color: var(--texto-medio);
-  max-width: 520px;
+}
+
+.form-subir-post {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--marron-tierra);
+}
+
+.input-subir {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid #CBD5E1;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.input-subir:focus {
+  border-color: var(--verde-selva);
+}
+
+.select-subir {
+  background: var(--blanco);
+}
+
+.textarea-subir {
+  resize: vertical;
+}
+
+.input-file {
+  font-size: 0.9rem;
+  color: var(--texto-medio);
+}
+
+.preview-mini-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.img-preview {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--verde-selva);
+}
+
+.btn-quitar-foto {
+  font-size: 0.8rem;
+  color: #DC2626;
+  font-weight: 700;
+}
+
+.form-actions-subir {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.btn-publicar-final {
+  flex: 1;
+  padding: 0.85rem 1.25rem;
+  background: var(--verde-selva);
+  color: var(--blanco);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+}
+
+.btn-publicar-final:hover {
+  background: var(--verde-selva-dark);
+}
+
+.btn-cancelar-subir {
+  padding: 0.85rem 1.25rem;
+  background: #F1F5F9;
+  color: var(--texto-medio);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+}
+
+/* ================= INICIATIVAS: FERIA Y DOMINGO SIN CELULAR ================= */
+.iniciativas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.iniciativa-card {
+  background: var(--blanco);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-md);
+  border: 2.5px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card-colegio {
+  border-color: var(--amarillo-borde);
+}
+
+.card-familia {
+  border-color: var(--rosado-borde);
+}
+
+.iniciativa-badge {
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  display: inline-block;
+}
+
+.iniciativa-title {
+  font-size: 1.75rem;
+  color: var(--verde-selva-dark);
+  margin-top: 0.5rem;
+}
+
+.iniciativa-lema {
+  font-size: 1.05rem;
+  color: var(--marron-tierra);
+  font-style: italic;
+}
+
+.iniciativa-obj {
+  font-size: 1rem;
+  color: var(--texto-medio);
+}
+
+.actividades-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.actividad-item {
+  background: #F8FAFC;
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.act-icono {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.act-info strong {
+  font-size: 0.98rem;
+  color: var(--verde-selva-dark);
+}
+
+.act-info p {
+  font-size: 0.88rem;
+  color: var(--texto-medio);
+  margin-top: 0.15rem;
+}
+
+.btn-proponer-colegio {
+  width: 100%;
+  padding: 0.85rem 1.25rem;
+  background: var(--amarillo-sol);
+  color: var(--blanco);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  margin-top: auto;
+}
+
+.btn-proponer-colegio:hover {
+  background: #D97706;
+}
+
+/* Domingo sin celular */
+.pasos-reto-box {
+  background: #FDF2F8;
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.pasos-reto-box h4 {
+  font-size: 1rem;
+  color: var(--rosado-intenso);
+  margin-bottom: 0.75rem;
+}
+
+.pasos-reto-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.paso-reto-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.num-circulo-reto {
+  width: 24px;
+  height: 24px;
+  background: var(--rosado-delfin);
+  color: #FFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.paso-reto-row p {
+  font-size: 0.92rem;
+  color: var(--texto-oscuro);
+}
+
+.reto-compromiso-card {
+  background: var(--blanco);
+  border: 1.5px solid var(--rosado-borde);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-top: auto;
+}
+
+.compromiso-text {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--marron-tierra);
+}
+
+.reto-contador-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--texto-medio);
+}
+
+.num-familias {
+  font-weight: 700;
+  color: var(--rosado-intenso);
+}
+
+.btn-aceptar-reto {
+  padding: 0.85rem 1.25rem;
+  background: var(--rosado-delfin);
+  color: var(--blanco);
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  transition: all 0.25s ease;
+}
+
+.btn-aceptar-reto:hover {
+  background: var(--rosado-intenso);
+}
+
+.btn-aceptar-reto.aceptado {
+  background: var(--verde-selva);
 }
 
 /* ================= Footer ================= */
@@ -1507,6 +1905,10 @@
   line-height: 1.6;
 }
 
+.footer-copy strong {
+  color: #FFF;
+}
+
 .footer-links-col h4, .footer-colors-palette h4 {
   font-size: 1.1rem;
   color: var(--amarillo-sol);
@@ -1569,54 +1971,29 @@
 
 /* ================= Media Queries ================= */
 @media (max-width: 1024px) {
-  .hero-section {
+  .inicio-mega-title {
+    font-size: 3.5rem;
+  }
+
+  .video-cuento-container {
+    grid-template-columns: 1fr;
+  }
+
+  .receta-hero-header {
     grid-template-columns: 1fr;
     text-align: center;
-    padding-top: 2rem;
   }
 
-  .hero-content {
-    align-items: center;
+  .iniciativas-grid {
+    grid-template-columns: 1fr;
   }
 
-  .hero-main-title {
-    font-size: 3.2rem;
+  .mini-fotos-grid {
+    grid-template-columns: 1fr;
   }
 
-  .hero-motto {
-    border-left: none;
-    border-bottom: 4px solid var(--amarillo-sol);
-    border-radius: var(--radius-md);
-  }
-
-  .hero-cta-group {
-    justify-content: center;
-  }
-
-  .frase-box {
-    text-align: left;
-    width: 100%;
-  }
-
-  .facts-strip {
+  .contadores-identidad {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .plato-featured-card {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .plato-card-right {
-    align-items: center;
-  }
-
-  .plato-title-row {
-    justify-content: center;
-  }
-
-  .plato-secreto-box {
-    text-align: left;
   }
 
   .footer-content {
@@ -1647,29 +2024,29 @@
     display: block;
   }
 
-  .hero-main-title {
-    font-size: 2.6rem;
+  .inicio-mega-title {
+    font-size: 2.8rem;
   }
 
-  .hero-drawings-showcase {
-    grid-template-columns: 1fr;
-  }
-
-  .mototaxi-banner {
+  .inicio-manifiesto-box {
     flex-direction: column;
     text-align: center;
   }
 
-  .guacamayo-callout {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .facts-strip {
+  .contadores-identidad {
     grid-template-columns: 1fr;
   }
 
-  .quiz-card {
+  .pasos-stepper-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .juego-board-container {
     padding: 1.5rem;
+  }
+
+  .muro-publicaciones-grid {
+    grid-template-columns: 1fr;
   }
 }

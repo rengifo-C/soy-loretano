@@ -1,31 +1,16 @@
 import React, { useState } from 'react';
-import { FRASES_TIPICAS } from './data/loretanoData';
-import {
-  DelfinRosado,
-  Guacamayo,
-  VictoriaRegia,
-  Otorongo,
-  Mototaxi,
-  Paiche,
-  FrutaAguaje,
-  KeneDivider
-} from './components/AmazonDrawings';
+import { DelfinRosado, KeneDivider } from './components/AmazonDrawings';
 import { SoundAmbiance } from './components/SoundAmbiance';
-import { Diccionario } from './components/Diccionario';
-import { Gastronomia } from './components/Gastronomia';
-import { Leyendas } from './components/Leyendas';
-import { Lugares } from './components/Lugares';
-import { Quiz } from './components/Quiz';
+import { Inicio } from './components/Inicio';
+import { CuentosSelva } from './components/CuentosSelva';
+import { RecetasLoretanas } from './components/RecetasLoretanas';
+import { JuegoLoreto } from './components/JuegoLoreto';
+import { YoSoyLoretano } from './components/YoSoyLoretano';
+import { FeriaYReto } from './components/FeriaYReto';
 import './App.css';
 
 export function App() {
-  const [fraseActual, setFraseActual] = useState(FRASES_TIPICAS[0]);
   const [menuAbierto, setMenuAbierto] = useState(false);
-
-  const cambiarFrase = () => {
-    const indiceAleatorio = Math.floor(Math.random() * FRASES_TIPICAS.length);
-    setFraseActual(FRASES_TIPICAS[indiceAleatorio]);
-  };
 
   const scrollTo = (id) => {
     setMenuAbierto(false);
@@ -37,7 +22,7 @@ export function App() {
 
   return (
     <div className="loretano-app">
-      {/* Barra superior de navegación */}
+      {/* Barra de Navegación Superior */}
       <header className="navbar-container">
         <div className="navbar-inner">
           <div className="brand-logo" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
@@ -46,30 +31,32 @@ export function App() {
             </div>
             <div className="logo-texts">
               <span className="brand-title">SOY LORETANO</span>
-              <span className="brand-tagline">Iquitos • Amazonía del Perú</span>
+              <span className="brand-tagline">“¡Yo soy de Iquitos!”</span>
             </div>
           </div>
 
-          {/* Menú de enlaces */}
+          {/* Menú con las 5 Secciones Principales */}
           <nav className={`nav-links ${menuAbierto ? 'open' : ''}`}>
-            <button onClick={() => scrollTo('diccionario')} className="nav-item">
-              <span className="nav-emoji">📖</span> Diccionario
+            <button onClick={() => scrollTo('inicio')} className="nav-item">
+              🏠 Inicio
             </button>
-            <button onClick={() => scrollTo('gastronomia')} className="nav-item">
-              <span className="nav-emoji">🍲</span> Comidas
+            <button onClick={() => scrollTo('cuentos')} className="nav-item">
+              👵🏼 Cuentos de la Selva
             </button>
-            <button onClick={() => scrollTo('leyendas')} className="nav-item">
-              <span className="nav-emoji">✨</span> Leyendas
+            <button onClick={() => scrollTo('recetas')} className="nav-item">
+              🍲 Recetas Paso a Paso
             </button>
-            <button onClick={() => scrollTo('lugares')} className="nav-item">
-              <span className="nav-emoji">📍</span> Lugares
+            <button onClick={() => scrollTo('juego')} className="nav-item nav-highlight">
+              🎮 Juego & Puntos
             </button>
-            <button onClick={() => scrollTo('quiz')} className="nav-item nav-highlight">
-              <span className="nav-emoji">🎯</span> Test Charapa
+            <button onClick={() => scrollTo('yo-soy-loretano')} className="nav-item nav-orgullo">
+              📸 Yo Soy Loretano
+            </button>
+            <button onClick={() => scrollTo('iniciativas')} className="nav-item">
+              🏫 Feria & Reto
             </button>
           </nav>
 
-          {/* Controles de ambiente y menú móvil */}
           <div className="navbar-actions">
             <SoundAmbiance />
             <button
@@ -83,136 +70,43 @@ export function App() {
         </div>
       </header>
 
-      {/* Hero Principal con Colores de la Selva */}
-      <section className="hero-section">
-        <div className="hero-content">
-          <div className="hero-badge">
-            <span className="badge-leaf">🌿</span>
-            <span>Bienvenidos a la Tierra Caliente y Alegre</span>
-            <span className="badge-pink-heart">💖</span>
-          </div>
+      {/* 1. SECCIÓN INICIO: Bienvenida grande con foto y lema */}
+      <Inicio
+        onExplorar={() => scrollTo('cuentos')}
+        onJugar={() => scrollTo('juego')}
+      />
 
-          <h1 className="hero-main-title">
-            <span className="title-soy">SOY</span>{' '}
-            <span className="title-loretano">LORETANO</span>
-          </h1>
-
-          <p className="hero-motto">
-            “Si eres de Iquitos tienes que saber esto”
-          </p>
-
-          <p className="hero-subtext">
-            Guía colorida de la cultura viva, gastronomía, expresiones charapas y leyendas
-            mágicas de la perla del Amazonas peruano.
-          </p>
-
-          {/* Botones de acción rápida */}
-          <div className="hero-cta-group">
-            <button onClick={() => scrollTo('diccionario')} className="btn-hero-primary">
-              🌴 Explorar Palabras Charapas
-            </button>
-            <button onClick={() => scrollTo('quiz')} className="btn-hero-secondary">
-              🎯 ¿Qué tan Loretano eres?
-            </button>
-          </div>
-
-          {/* Caja interactiva de frase típica loretana */}
-          <div className="frase-box">
-            <div className="frase-badge">🗣️ Frase del día:</div>
-            <div className="frase-body">
-              <h2 className="frase-text">{fraseActual.frase}</h2>
-              <p className="frase-significado">{fraseActual.significado}</p>
-            </div>
-            <button onClick={cambiarFrase} className="btn-nueva-frase" title="Cambiar frase">
-              🎲 ¡Otra frase, choche!
-            </button>
-          </div>
-        </div>
-
-        {/* Galería de dibujos amazónicos en el Hero */}
-        <div className="hero-drawings-showcase">
-          <div className="drawing-card card-delfin">
-            <DelfinRosado className="w-32 h-28" />
-            <span className="drawing-label">Bufeo Colorado</span>
-          </div>
-          <div className="drawing-card card-guacamayo">
-            <Guacamayo className="w-28 h-32" />
-            <span className="drawing-label">Guacamayo Escarlata</span>
-          </div>
-          <div className="drawing-card card-victoria">
-            <VictoriaRegia className="w-32 h-24" />
-            <span className="drawing-label">Victoria Regia</span>
-          </div>
-          <div className="drawing-card card-mototaxi">
-            <Mototaxi className="w-32 h-24" />
-            <span className="drawing-label">Mototaxi de Iquitos</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Separador de arte Kené */}
+      {/* Cenefa Kené Amazónica */}
       <KeneDivider />
 
-      {/* Franja de datos rápidos loretanos */}
-      <section className="facts-strip">
-        <div className="fact-item">
-          <span className="fact-icon">🚤</span>
-          <div className="fact-info">
-            <strong>Río Amazonas</strong>
-            <span>El más caudaloso del mundo</span>
-          </div>
-        </div>
-        <div className="fact-item">
-          <span className="fact-icon">🛺</span>
-          <div className="fact-info">
-            <strong>Capital del Mototaxi</strong>
-            <span>Cientos de miles en circulación</span>
-          </div>
-        </div>
-        <div className="fact-item">
-          <span className="fact-icon">🍃</span>
-          <div className="fact-info">
-            <strong>San Juan Bautista</strong>
-            <span>El 24 de junio es fiesta total</span>
-          </div>
-        </div>
-        <div className="fact-item">
-          <span className="fact-icon">🌴</span>
-          <div className="fact-info">
-            <strong>Aguaje Sagrado</strong>
-            <span>El fruto rey de Loreto</span>
-          </div>
-        </div>
-      </section>
+      {/* 2. SECCIÓN CUENTOS DE LA SELVA: Contados por abuelitos (El Chullachaqui y El Yacuruna) */}
+      <CuentosSelva />
 
-      {/* Sección 1: Diccionario Charapa */}
-      <Diccionario />
-
-      {/* Separador Kené */}
+      {/* Cenefa Kené Amazónica */}
       <KeneDivider />
 
-      {/* Sección 2: Gastronomía Loretana */}
-      <Gastronomia />
+      {/* 3. SECCIÓN RECETAS LORETANAS: Paso a paso de Juane, Tacacho y Patarashca */}
+      <RecetasLoretanas />
 
-      {/* Separador Kené */}
+      {/* Cenefa Kené Amazónica */}
       <KeneDivider />
 
-      {/* Sección 3: Mitos y Leyendas */}
-      <Leyendas />
+      {/* 4. SECCIÓN JUEGO: ¿Cuánto sabes de Loreto? Con puntos y niveles */}
+      <JuegoLoreto />
 
-      {/* Separador Kené */}
+      {/* Cenefa Kené Amazónica */}
       <KeneDivider />
 
-      {/* Sección 4: Lugares de Iquitos */}
-      <Lugares />
+      {/* 5. SECCIÓN YO SOY LORETANO: Espacio para subir foto de comida, traje o baile */}
+      <YoSoyLoretano />
 
-      {/* Separador Kené */}
+      {/* Cenefa Kené Amazónica */}
       <KeneDivider />
 
-      {/* Sección 5: Quiz Interactivo */}
-      <Quiz />
+      {/* SECCIÓN ESPECIAL: Feria "Día Loretano" en el colegio y "Domingo sin celular" */}
+      <FeriaYReto />
 
-      {/* Pie de página con ondas y colores de la selva */}
+      {/* Pie de Página Loretano */}
       <footer className="footer-loretano">
         <div className="footer-waves">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -231,38 +125,40 @@ export function App() {
             </div>
             <p className="footer-motto">“Si eres de Iquitos tienes que saber esto”</p>
             <p className="footer-copy">
-              Creado con amor y orgullo por nuestra cultura amazónica. Dedicado a toda la
-              gente linda de Iquitos, Nauta, Requena, Yurimaguas y todo Loreto.
+              Proyecto creado para que la juventud de Iquitos recupere el amor y orgullo
+              por sus cuentos ancestrales, sus comidas tradicionales, sus danzas y su identidad amazónica.
+              <strong> ¡Di siempre con el corazón: Yo soy de Iquitos!</strong>
             </p>
           </div>
 
           <div className="footer-links-col">
-            <h4>Secciones</h4>
+            <h4>Las 5 Secciones</h4>
             <ul>
-              <li><button onClick={() => scrollTo('diccionario')}>📖 Diccionario Charapa</button></li>
-              <li><button onClick={() => scrollTo('gastronomia')}>🍲 Platos Típicos</button></li>
-              <li><button onClick={() => scrollTo('leyendas')}>✨ Mitos y Leyendas</button></li>
-              <li><button onClick={() => scrollTo('lugares')}>📍 Lugares de Iquitos</button></li>
-              <li><button onClick={() => scrollTo('quiz')}>🎯 Test de Loreteñidad</button></li>
+              <li><button onClick={() => scrollTo('inicio')}>1. Inicio: ¡Yo soy de Iquitos!</button></li>
+              <li><button onClick={() => scrollTo('cuentos')}>2. Cuentos de los Abuelitos</button></li>
+              <li><button onClick={() => scrollTo('recetas')}>3. Recetas Paso a Paso</button></li>
+              <li><button onClick={() => scrollTo('juego')}>4. Juego: ¿Cuánto Sabes?</button></li>
+              <li><button onClick={() => scrollTo('yo-soy-loretano')}>5. Muro: Yo Soy Loretano</button></li>
+              <li><button onClick={() => scrollTo('iniciativas')}>• Feria y Domingo sin Celular</button></li>
             </ul>
           </div>
 
           <div className="footer-colors-palette">
-            <h4>Nuestros Colores de la Selva</h4>
+            <h4>Colores de Nuestra Selva</h4>
             <div className="palette-pills">
               <span className="pill-color color-verde">Verde Selva</span>
               <span className="pill-color color-amarillo">Amarillo Aguaje</span>
               <span className="pill-color color-marron">Marrón Tierra</span>
-              <span className="pill-color color-rosado">Rosado Delfín</span>
+              <span className="pill-color color-rosado">Rosado Bufeo</span>
             </div>
             <div className="footer-quote">
-              “¡Iquitos, te llevo en el corazón y en el sabor del juane!” 🌿💖
+              “Nuestra cultura no da vergüenza, ¡nuestra cultura es pura grandeza!” 🌿💖
             </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} SOY LORETANO • Las chicas del futuro • Loreto - Perú</p>
+          <p>© {new Date().getFullYear()} SOY LORETANO • Las chicas del futuro • Iquitos, Loreto, Perú</p>
         </div>
       </footer>
     </div>

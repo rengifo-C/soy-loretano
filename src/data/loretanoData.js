@@ -1,301 +1,327 @@
-export const PALABRAS_LORETANAS = [
+// Datos enriquecidos para la plataforma "SOY LORETANO"
+// Enfocada en rescatar el orgullo de los jóvenes por su cultura loretana
+
+export const CUENTOS_ABUELITOS = [
   {
-    palabra: "Choche / Chocherita",
-    significado: "Amigo del alma, compadre, hermano de la vida o compañero cercano.",
-    ejemplo: "¡Habla, chocherita! ¿Nos vamos al malecón a tomar una aguajina?",
-    categoria: "Expresiones",
-    color: "verde"
+    id: "chullachaqui",
+    titulo: "El Misterio del Chullachaqui",
+    narrador: "Abuelita Rosa (82 años, nacida en Belén - Iquitos)",
+    personaje: "El duende protector de los montes con pie desigual",
+    duracion: "3:45 min",
+    videoThumbnail: "🌲👣",
+    color: "verde",
+    sinopsis: "El duende que cuida los árboles y animales de la selva. Toma la forma de tus amigos para llamarte monte adentro, pero nunca puede ocultar su pie de venado.",
+    cuentoCompleto: [
+      "Hijitos míos, cuando yo tenía apenas diez años, mi abuelo siempre me advertía: 'Rosita, cuando vayas a recoger aguaje a la cocha, jamás sigas a nadie que te llame silbando entre los helechos'.",
+      "El Chullachaqui no es malo por maldad, él es el guardián más antiguo de la Amazonía. Cuida a las sachavacas, a los sajinos y a los cedros centenarios de aquellos que entran al bosque a destruir sin pedir permiso a la madre selva.",
+      "Tiene el poder de transformarse en tu primo, en tu compañerito del colegio o en tu tío preferido. Te saluda con una sonrisa y te dice: 'Ven, vamos a coger guabas maduras'. Pero si eres un muchacho despierto, lo primero que harás será bajar la mirada al suelo...",
+      "¡Ahí está el secreto! Su pie derecho es como el de cualquier persona, pero su pie izquierdo es una pezuña de venado, o a veces de tapir, doblada hacia atrás. Al verse descubierto, lanza una carcajada que hace temblar las hojas y desaparece en una ráfaga de viento perfumado a resina.",
+      "Por eso, muchachos, respeten nuestro monte, aprendan a escuchar a los ancianos y jamás sientan vergüenza de las historias sagradas que nuestros ancestros nos dejaron."
+    ],
+    moraleja: "Respetar la naturaleza y ser siempre observador y prudente con los consejos de los abuelos.",
+    fraseAbuelito: "“El monte tiene dueño, guambrillos. Si lo respetas con amor, la selva siempre te cuidará.”"
   },
   {
-    palabra: "Guambrillo / Huambrilla",
-    significado: "Niño, niña, muchachito inquieto o joven.",
-    ejemplo: "Ese guambrillo anda jugando pelota bajo la lluvia torrencial.",
-    categoria: "Vida diaria",
-    color: "rosado"
-  },
-  {
-    palabra: "De la patada",
-    significado: "Algo extraordinario, espectacular, delicioso o buenísimo.",
-    ejemplo: "¡El tacacho con cecina de la tía Norma está de la patada!",
-    categoria: "Expresiones",
-    color: "amarillo"
-  },
-  {
-    palabra: "Avispa la oreja",
-    significado: "Ponte atento, estate alerta, no te dejes engañar o pon cuidado.",
-    ejemplo: "Avispa la oreja, paisano, que en la curva del río corre corriente brava.",
-    categoria: "Expresiones",
-    color: "marron"
-  },
-  {
-    palabra: "Pishcota",
-    significado: "Persona muy inquieta, vivaz, risueña o traviesa.",
-    ejemplo: "La huambrilla es bien pishcota, no se queda quieta ni un segundo.",
-    categoria: "Vida diaria",
-    color: "rosado"
-  },
-  {
-    palabra: "Ichichimi",
-    significado: "Hormiga diminuta pero sumamente brava cuya picadura arde.",
-    ejemplo: "¡Cuidado te sientes en ese tronco seco, está lleno de ichichimi!",
-    categoria: "Fauna",
-    color: "amarillo"
-  },
-  {
-    palabra: "Bochinche",
-    significado: "Fiesta bulliciosa, jarana alegre o alboroto festivo con cumbia amazónica.",
-    ejemplo: "En el barrio se armó un bochinche con pandilla y bombo baile.",
-    categoria: "Costumbres",
-    color: "verde"
-  },
-  {
-    palabra: "Chulla",
-    significado: "Objeto que ha quedado solo, desemparejado o único.",
-    ejemplo: "El perro se llevó mi sandalia y ahora ando con una chulla chancleta.",
-    categoria: "Vida diaria",
-    color: "marron"
-  },
-  {
-    palabra: "Pillpinto",
-    significado: "Mariposa selvática de vivos y tornasolados colores.",
-    ejemplo: "En la mañana vi un pillpinto azul eléctrico revoloteando en el jardín.",
-    categoria: "Fauna",
-    color: "rosado"
-  },
-  {
-    palabra: "Yacuruna",
-    significado: "Místico señor o espíritu de las profundidades de los ríos amazónicos.",
-    ejemplo: "Dicen los abuelos que el Yacuruna cuida a los peces y plantas del río.",
-    categoria: "Mitos",
-    color: "verde"
-  },
-  {
-    palabra: "Tangarana",
-    significado: "Árbol selvático habitado por hormigas guardianas muy agresivas.",
-    ejemplo: "A los perezosos antes los amenazaban con amarrarlos a la tangarana.",
-    categoria: "Flora",
-    color: "marron"
-  },
-  {
-    palabra: "Masato",
-    significado: "Bebida ancestral loretana elaborada a base de yuca fermentada.",
-    ejemplo: "Llegar a la comunidad y recibir un buen mate de masato bien heladito.",
-    categoria: "Gastronomía",
-    color: "amarillo"
+    id: "yacumama",
+    titulo: "El Secreto del Yacuruna y la Madre Agua",
+    narrador: "Abuelo Don Teófilo (78 años, pescador artesanal de Nauta)",
+    personaje: "El señor místico de las profundidades del Río Amazonas",
+    duracion: "4:12 min",
+    videoThumbnail: "🌊🐬",
+    color: "rosado",
+    sinopsis: "El poderoso señor de las aguas del Amazonas que monta sobre una gigantesca serpiente negra y protege a los peces del río más caudaloso del mundo.",
+    cuentoCompleto: [
+      "Muchachos de mi tierra, miren el río Amazonas. No es solo agua que corre; es un ser vivo que respira, que canta y que tiene en sus profundidades a su gobernante: el Yacuruna.",
+      "Los viejos pescadores sabemos que cuando el río está en calma absoluta al atardecer y el agua parece un espejo negro, el Yacuruna sale montado en una boa negra colosal, vistiendo collares de escamas de paiche y piel de bufeo colorado.",
+      "El Yacuruna conoce cada cocha, cada quebrada y el nombre de cada cardumen de gamitanas y boquichicos. A los pescadores codiciosos que botan basura o tiran veneno al agua, el Yacuruna los confunde haciendo girar sus canoas en remolinos mágicos.",
+      "Pero a los jóvenes que cuidan el río y le cantan con respeto, el Yacuruna les permite regresar a casa con la canoa llena de peces para alimentar a la familia.",
+      "Jóvenes de Iquitos: nuestro río es la maravilla del mundo. ¡Qué orgullo tan grande haber nacido donde nace el río más imponente de la Tierra!"
+    ],
+    moraleja: "Cuidar la pureza de nuestros ríos y valorar la riqueza natural de Loreto como nuestro mayor tesoro.",
+    fraseAbuelito: "“El Amazonas no tiene dueño humano; el río es vida, sangre de Loreto y orgullo de todos nosotros.”"
   }
 ];
 
-export const PLATOS_LORETANOS = [
+export const RECETAS_PASO_PASO = [
   {
     id: "juane",
-    nombre: "Juane de Gallina",
-    apodo: "El Rey de la Selva",
-    icono: "leaf",
+    nombre: "Juane de Gallina Tradicional",
     color: "verde",
-    descripcion: "El plato bandera de la Amazonía. Arroz sazonado con palillo (cúrcuma), orégano, aceitunas y una presa entera de gallina de chacra, todo envuelto firmemente en hojas de bijao y cocido a fuego de leña.",
-    ingredientes: ["Gallina de chacra", "Arroz sazonado", "Hoja de bijao", "Palillo de la selva", "Huevo duro y aceituna"],
-    secreto: "Se come tradicionalmente el 24 de junio por la Fiesta de San Juan a orillas del río.",
-    emoji: "🍃"
+    tiempo: "1 h 30 min",
+    dificultad: "Fácil de aprender en familia",
+    icono: "🍃",
+    historia: "El plato sagrado de la fiesta de San Juan (24 de junio). Su forma redonda representa la cabeza de San Juan Bautista y es el símbolo supremo de reunión familiar.",
+    ingredientes: [
+      "1 kg de arroz blanco de grano entero",
+      "4 presas generosas de gallina de chacra",
+      "Hojas de bijao frescas (soasadas al fuego)",
+      "Tiras de soga de cogollo de plátano o pabilo",
+      "4 huevos duros cocidos y aceitunas negras",
+      "Palillo (cúrcuma de la selva) y sacha culantro",
+      "Ajos, cebolla regional y orégano seco"
+    ],
+    pasos: [
+      {
+        numero: 1,
+        titulo: "El Aderezo y la Gallina",
+        detalle: "Dorar los ajos, la cebolla y el palillo en manteca o aceite hasta que huela a selva. Añadir las presas de gallina, sacha culantro picadito y agua suficiente para cocinar la carne hasta que quede tierna. Reservar el caldo aromático.",
+        tip: "El palillo fresco de la selva da un color amarillo dorado brillante y un aroma terroso inigualable."
+      },
+      {
+        numero: 2,
+        titulo: "Preparación del Arroz Loretano",
+        detalle: "En el caldo concentrado de gallina cocinamos el arroz para que absorba todo el sazón. Una vez listo y tibio, batimos 4 huevos crudos y los mezclamos con el arroz para darle consistencia cremosa y suave.",
+        tip: "El huevo crudo mezclado con el arroz caliente ayuda a que el juane quede compacto y no se desarme."
+      },
+      {
+        numero: 3,
+        titulo: "El Envoltorio en Hoja de Bijao",
+        detalle: "Cruzar dos hojas de bijao limpias y soasadas. Colocar una cama generosa de arroz, la presa de gallina al centro, medio huevo duro y dos aceitunas. Tapar con más arroz, juntar las cuatro puntas de las hojas y atar fuertemente con la soguilla.",
+        tip: "Soasar la hoja de bijao al fuego la vuelve suave y elástica para que no se quiebre al amarrar."
+      },
+      {
+        numero: 4,
+        titulo: "Cocción al Vapor y Servido",
+        detalle: "Poner los juanes en una olla grande con poca agua durante 45 minutos. Servir calientito acompañado de plátano frito y su infaltable ají charapita con cocona.",
+        tip: "¡Se come con la mano o con cuchara de palo sintiendo el perfume de la hoja!"
+      }
+    ]
   },
   {
     id: "tacacho",
     nombre: "Tacacho con Cecina y Chorizo",
-    apodo: "El Desayuno de los Fuertes",
-    icono: "sparkles",
     color: "amarillo",
-    descripcion: "Plátanos verdes bellacos asados al carbón, majados en mortero de madera con manteca de cerdo y chicharrones crujientes, servidos con cecina ahumada artesanal y chorizo regional frito.",
-    ingredientes: ["Plátano bellaco verde", "Cecina de cerdo ahumada", "Chorizo selvático", "Chicharrón", "Manteca criolla"],
-    secreto: "El plátano debe majarse caliente para que absorba el toque ahumado del chicharrón.",
-    emoji: "🍌"
+    tiempo: "40 min",
+    dificultad: "Rápido y delicioso",
+    icono: "🍌",
+    historia: "El desayuno y almuerzo que llena de energía al loretano. La palabra 'tacacho' viene del quechua 'taka chu', que significa 'golpear o majar plátano'.",
+    ingredientes: [
+      "6 plátanos verdes bellacos (frescos y duros)",
+      "250g de chicharrón de cerdo crujiente picado",
+      "3 cucharadas de manteca de cerdo artesanal",
+      "400g de cecina de cerdo ahumada loretana",
+      "2 chorizos regionales de la selva",
+      "Sal al gusto"
+    ],
+    pasos: [
+      {
+        numero: 1,
+        titulo: "Asar los Plátanos Bellacos",
+        detalle: "Pelar los plátanos verdes y asarlos a las brasas de carbón o fuego lento hasta que queden dorados por fuera y tiernos por dentro (también se pueden hervir o freír en trozos).",
+        tip: "Asar al carbón le aporta ese aroma ahumado característico que ningún restaurante moderno puede igualar."
+      },
+      {
+        numero: 2,
+        titulo: "Majar en Mortero de Madera",
+        detalle: "Colocar los trozos de plátano caliente en un mortero tradicional o tacachero de madera. Chancar con fuerza agregando la manteca y sal al gusto hasta formar una masa suave pero con textura.",
+        tip: "Debes majar mientras el plátano está bien caliente para que la manteca se funda por completo."
+      },
+      {
+        numero: 3,
+        titulo: "Incorporar los Chicharrones y Moldear",
+        detalle: "Agregar los chicharrones crocantes a la masa majada. Con las manos limpias, amasar y formar bolas del tamaño de una manzana compacta y redonda.",
+        tip: "Presiona con cariño para que los tropezones de chicharrón queden sellados en cada mordisco."
+      },
+      {
+        numero: 4,
+        titulo: "Dorar la Cecina y Servir",
+        detalle: "En una sartén bien caliente freír la cecina ahumada y el chorizo regional hasta que queden jugosos. Servir las bolas de tacacho calientes al lado de la cecina y ajicito de cocona.",
+        tip: "¡El contraste entre lo salado y ahumado de la cecina con el tacacho es magia pura!"
+      }
+    ]
   },
   {
     id: "patarashca",
-    nombre: "Patarashca de Paiche",
-    apodo: "Tesoro del Río Amazonas",
-    icono: "fish",
+    nombre: "Patarashca de Pescado de Río",
     color: "rosado",
-    descripcion: "Pescado fresco de río (como paiche, doncella o dorado) marinado con sacha culantro, ají dulce, cebolla y ajo, envuelto en hojas de bijao y asado a las brasas de carbón.",
-    ingredientes: ["Pescado amazónico fresco", "Sacha culantro", "Ají dulce charapa", "Hojas de bijao", "Cebolla regional"],
-    secreto: "La hoja de bijao sella todos los jugos naturales y le da un aroma herbal inigualable.",
-    emoji: "🐟"
-  },
-  {
-    id: "inchicapi",
-    nombre: "Inchicapi de Gallina con Yuca",
-    apodo: "El Abrazo Calientito de la Selva",
-    icono: "soup",
-    color: "marron",
-    descripcion: "Sopa espesa y reconstituyente hecha a base de gallina de chacra, maní tostado y molido finamente, harina de maíz suave, yuca harinosa y hojas de sacha culantro.",
-    ingredientes: ["Gallina de chacra", "Maní molido", "Harina de maíz", "Yuca fresca", "Sacha culantro"],
-    secreto: "Se cocina a fuego lento hasta lograr una textura aterciopelada y fragante.",
-    emoji: "🍲"
-  },
-  {
-    id: "chonta",
-    nombre: "Ensalada de Chonta",
-    apodo: "Frescura Tropical Pura",
-    icono: "salad",
-    color: "verde",
-    descripcion: "Finas tiras deshilachadas del corazón de la palmera de chonta o pijuayo, aderezadas con limón recién exprimido, sal de mar y un toque de aceite de oliva o sacha inchi.",
-    ingredientes: ["Palmito de chonta tierna", "Limón criollo", "Tomate regional", "Cebolla morada", "Palta"],
-    secreto: "Plato tradicional de Semana Santa y el acompañamiento más fresco frente al calor iquiteño.",
-    emoji: "🥗"
-  },
-  {
-    id: "aguaje",
-    nombre: "Aguajina & Frutas Exóticas",
-    apodo: "Elixir del Oriente",
-    icono: "cup",
-    color: "amarillo",
-    descripcion: "Refrescos elaborados con pulpa pura de frutas amazónicas: la inconfundible aguajina del aguaje maduro, camu camu con su altísima vitamina C, cocona con su acidez perfecta y el cremoso ungurahui.",
-    ingredientes: ["Aguaje maduro", "Camu Camu fresco", "Cocona agridulce", "Hielo picado", "Azúcar al gusto"],
-    secreto: "El aguaje contiene fitoestrógenos naturales y es el símbolo supremo de la identidad loretana.",
-    emoji: "🍹"
+    tiempo: "45 min",
+    dificultad: "Sabor ancestral",
+    icono: "🐟",
+    historia: "Técnica milenaria de los pueblos originarios de Loreto para cocinar los pescados frescos de río usando las hojas del bosque como horno natural.",
+    ingredientes: [
+      "4 pescados enteros de río (paiche, doncella, sábalo o boquichico)",
+      "1 manojo fresco de sacha culantro silvestre",
+      "3 ajíes dulces charapas finamente picados",
+      "2 cebollas rojas regionales picadas en juliana",
+      "Dientes de ajo chancados y comino al gusto",
+      "Hojas de bijao para envolver y tiras para atar"
+    ],
+    pasos: [
+      {
+        numero: 1,
+        titulo: "Limpieza del Pescado",
+        detalle: "Limpiar y eviscerar el pescado fresco de río. Hacerle unos cortes transversales suaves en los lomos para que el aderezo penetre hasta la espina.",
+        tip: "El pescado de agua dulce fresco huele a río limpio y a hojas verdes, nunca a olor fuerte."
+      },
+      {
+        numero: 2,
+        titulo: "El Relleno Aromático Selvático",
+        detalle: "En un tazón mezclar cebolla, ajos, sacha culantro bien picado, ají dulce, sal y un toque de comino. Frotar el pescado por dentro y por fuera con este menjunje aromático.",
+        tip: "El sacha culantro (culantro del monte) es el alma de la gastronomía loretana, con un sabor 5 veces más potente que el culantro común."
+      },
+      {
+        numero: 3,
+        titulo: "Envoltura Protectora en Bijao",
+        detalle: "Envolver cada pescado con 2 a 3 capas de hojas de bijao soasadas. Cerrar doblando los extremos y atar bien con soga vegetal para que no escape el jugo durante la cocción.",
+        tip: "El bijao actúa como una olla a presión natural, concentrando todos los vapores y nutrientes."
+      },
+      {
+        numero: 4,
+        titulo: "Cocción a las Brasas",
+        detalle: "Colocar los paquetes sobre la parrilla de carbón o cenizas calientes durante 25 a 30 minutos, volteando a la mitad del tiempo. Al abrir la hoja en la mesa, el vapor perfumará toda la casa.",
+        tip: "Acompáñalo con yuca cocida harinosa o plátanos verdes asados."
+      }
+    ]
   }
 ];
 
-export const LEYENDAS_LORETANAS = [
+export const PREGUNTAS_JUEGO_LORETO = [
   {
-    id: "bufeo",
-    titulo: "El Bufeo Colorado (Delfín Rosado)",
-    subtitulo: "El galán encantador de las fiestas ribereñas",
-    color: "rosado",
-    historia: "Cuentan en las riberas del río Amazonas que el majestuoso delfín rosado tiene el poder de transformarse en un hombre blanco, alto y bien vestido en las noches de luna llena y fiesta patronal. Se pone un sombrero de paja para cubrir el orificio respiratorio que aún conserva en la coronilla. Seduce con su baile y encanto a la muchacha más hermosa del pueblo para llevarla a su palacio submarino.",
-    advertencia: "Si un forastero no se quita el sombrero ni para bailar en la fiesta... ¡mírale bien la coronilla!",
-    icono: "dolphin"
+    id: 1,
+    pregunta: "¿Por qué ningún joven de Iquitos debe sentir vergüenza de su origen?",
+    opciones: [
+      { texto: "Porque Iquitos tiene una cultura milenaria, el río más grande del mundo y una alegría única", puntos: 100, esCorrecta: true },
+      { texto: "Porque no hay otra opción", puntos: 0, esCorrecta: false },
+      { texto: "Porque la selva es lejana", puntos: 0, esCorrecta: false },
+      { texto: "Porque solo es importante la comida", puntos: 0, esCorrecta: false }
+    ],
+    explicacion: "¡Exacto! Loreto es cuna de saberes ancestrales, biodiversidad inigualable y una hospitalidad que enamora al mundo entero."
   },
   {
-    id: "tunche",
-    titulo: "El Tunche Maligno",
-    subtitulo: "El silbido que hace erizar la piel en la noche",
-    color: "verde",
-    historia: "El alma en pena de un hombre que vagó por la selva sin encontrar paz. Vuela entre las copas de los árboles emitiendo un silbido agudo, penetrante y escalofriante: 'fiiiiinnn... fin, fin...'. Los abuelos loretanos advierten que jamás debes intentar imitar su silbido, porque enfurece y persigue a quien se burle de él.",
-    advertencia: "Si escuchas el silbido del Tunche en la oscuridad, quédate en silencio, guarda la calma y no respondas.",
-    icono: "ghost"
+    id: 2,
+    pregunta: "¿Cómo puedes reconocer al Chullachaqui si intenta engañarte en el monte?",
+    opciones: [
+      { texto: "Mirándole los pies: tiene uno humano y el otro de venado o sachavaca", puntos: 100, esCorrecta: true },
+      { texto: "Porque viste una camiseta de fútbol", puntos: 0, esCorrecta: false },
+      { texto: "Porque habla en otro idioma", puntos: 0, esCorrecta: false },
+      { texto: "Porque no le gusta la fruta", puntos: 0, esCorrecta: false }
+    ],
+    explicacion: "¡Muy bien! Su nombre en quechua significa 'pie desigual'. El pie de animal es lo único que el guardián del monte no puede esconder."
   },
   {
-    id: "chullachaqui",
-    titulo: "El Chullachaqui",
-    subtitulo: "El protector de los bosques con un pie de venado",
-    color: "marron",
-    historia: "Su nombre en quechua significa 'pie desigual' (chulla = impar, chaqui = pie). Es un duende pequeño que cuida celosamente la fauna y flora de la selva virgen. Tiene la habilidad mágica de tomar la forma de un familiar o amigo tuyo para llamarte y hacerte internar en lo más espeso del monte hasta perderte.",
-    advertencia: "Para descubrirlo, siempre debes mirarle los pies: uno es humano y el otro tiene forma de pezuña de venado o sachavaca.",
-    icono: "foot"
+    id: 3,
+    pregunta: "¿Cuál es la hoja sagrada de la selva con la que se envuelven el Juane y la Patarashca?",
+    opciones: [
+      { texto: "La hoja de Bijao", puntos: 100, esCorrecta: true },
+      { texto: "La hoja de lechuga", puntos: 0, esCorrecta: false },
+      { texto: "El papel periódico", puntos: 0, esCorrecta: false },
+      { texto: "La hoja de laurel", puntos: 0, esCorrecta: false }
+    ],
+    explicacion: "¡Excelente! La hoja de bijao aporta un aroma herbal inconfundible y conserva frescos los alimentos de manera 100% ecológica."
   },
   {
-    id: "yacumama",
-    titulo: "La Gran Yacumama",
-    subtitulo: "La madre serpiente gigante del Amazonas",
-    color: "amarillo",
-    historia: "Es la protectora colosal de las aguas del Amazonas, una serpiente titánica de decenas de metros de largo. Cuando reposa en los recodos del río o en las cochas tranquilas, su cuerpo parece una isla flotante o un tronco descomunal. Antes de navegar en aguas desconocidas, los nativos tocan un cuerno de caracol para pedir permiso y que la Yacumama calme las olas.",
-    advertencia: "Respeta las cochas profundas y los remolinos del río; allí descansa la madre del agua.",
-    icono: "snake"
+    id: 4,
+    pregunta: "¿Qué baile tradicional amazónico se baila en ronda alrededor de la 'humisha' en carnavales y San Juan?",
+    opciones: [
+      { texto: "La Pandilla Amazónica y el Bombo Baile", puntos: 100, esCorrecta: true },
+      { texto: "El tango argentino", puntos: 0, esCorrecta: false },
+      { texto: "El vals vienés", puntos: 0, esCorrecta: false },
+      { texto: "La polka", puntos: 0, esCorrecta: false }
+    ],
+    explicacion: "¡Eso! La pandilla se zapatea con pañuelos al aire, al compás del bombo y el tamboril, celebrando la alegría desbordante de nuestro pueblo."
+  },
+  {
+    id: 5,
+    pregunta: "¿Qué fruta de palmera loretana es famosa por su pulpa amarilla y es comida con salecita en cada esquina de Iquitos?",
+    opciones: [
+      { texto: "El Aguaje", puntos: 100, esCorrecta: true },
+      { texto: "La manzana", puntos: 0, esCorrecta: false },
+      { texto: "La fresa", puntos: 0, esCorrecta: false },
+      { texto: "El kiwi", puntos: 0, esCorrecta: false }
+    ],
+    explicacion: "¡El Aguaje! Fruto de la 'palmera de la vida', lleno de antioxidantes y símbolo absoluto de la identidad de las mujeres y hombres de Loreto."
+  },
+  {
+    id: 6,
+    pregunta: "¿Quién es el Yacuruna según los relatos de los abuelos pescadores?",
+    opciones: [
+      { texto: "El señor místico protector de las profundidades del río Amazonas", puntos: 100, esCorrecta: true },
+      { texto: "Un pájaro carpintero", puntos: 0, esCorrecta: false },
+      { texto: "Un árbol maderero", puntos: 0, esCorrecta: false },
+      { texto: "Un mototaxista de noche", puntos: 0, esCorrecta: false }
+    ],
+    explicacion: "¡Correcto! El Yacuruna vigila los ríos y cochas para que los humanos no dañen el agua ni pesquen sin respeto a la naturaleza."
   }
 ];
 
-export const LUGARES_IQUITOS = [
+export const NIVELES_JUEGO = [
+  { puntosMin: 0, puntosMax: 200, nombre: "Guambrillo Aprendiz 🌿", insignia: "🥉", mensaje: "¡Estás dando tus primeros pasos para reconectar con tus raíces!" },
+  { puntosMin: 201, puntosMax: 400, nombre: "Chocherita Ribereño 🛶", insignia: "🥈", mensaje: "¡Muy bien! Ya conoces secretos importantes de nuestra tierra loretana." },
+  { puntosMin: 401, puntosMax: 550, nombre: "Cazador de Tradiciones 🏹", insignia: "🥇", mensaje: "¡Impresionante! Tienes el espíritu de la selva latiendo fuerte en tu pecho." },
+  { puntosMin: 551, puntosMax: 9999, nombre: "¡Gran Sabio Loretano! 🐆👑", insignia: "🏆", mensaje: "¡Puro Orgullo Loretano! Eres un embajador digno de nuestra cultura en el mundo." }
+];
+
+export const PUBLICACIONES_INICIALES = [
   {
-    nombre: "Malecón Tarapacá y Boulevard",
-    distrito: "Iquitos Centro",
-    descripcion: "El paseo peatonal más romántico de la ciudad, con casas de azulejos de la época del caucho, vista panorámica al río Itaya y brisa amazónica constante.",
-    destacado: "Disfruta de helados artesanales de aguaje y aguaje-cocona mientras miras el atardecer dorado.",
-    color: "verde"
+    id: 1,
+    autor: "Luciana Rengifo (16 años)",
+    barrio: "San Juan Bautista, Iquitos",
+    categoria: "Baile Tradicional 💃",
+    mensaje: "¡Bailando la pandilla en el festival de mi colegio! Antes me daba vergüenza vestirme con traje tradicional, pero hoy siento que llevo la historia viva de mis antepasados. ¡Yo soy de Iquitos con mucho orgullo!",
+    likes: 42,
+    tipo: "baile",
+    avatarColor: "rosado"
   },
   {
-    nombre: "La Casa de Fierro",
-    distrito: "Frente a la Plaza de Armas",
-    descripcion: "Diseñada en París por los talleres del célebre ingeniero Gustave Eiffel en 1889, comprada durante el auge del caucho y ensamblada pieza por pieza en el corazón de Iquitos.",
-    destacado: "Una joya arquitectónica de metal en plena selva tropical que resiste al calor amazónico.",
-    color: "marron"
+    id: 2,
+    autor: "Mateo Vásquez (15 años)",
+    barrio: "Punchana, Iquitos",
+    categoria: "Comida Típica 🍲",
+    mensaje: "Mi abuela me enseñó a soasar la hoja de bijao para envolver juane. ¡Nos quedó de la patada! Cocinar nuestra comida es el mejor homenaje a mi familia.",
+    likes: 38,
+    tipo: "comida",
+    avatarColor: "verde"
   },
   {
-    nombre: "Barrio y Mercado de Belén",
-    distrito: "Belén",
-    descripcion: "Conocida como la 'Venecia de la Amazonía'. Durante la creciente del río, las casas flotan sobre pilotes de madera de balsa y la gente se traslada en canoas.",
-    destacado: "Su mercado alberga el pasaje Paquito, famoso por sus hierbas curativas y cortezas medicinales.",
-    color: "amarillo"
-  },
-  {
-    nombre: "Centro de Rescate Amazónico (CREA)",
-    distrito: "Carretera Iquitos - Nauta",
-    descripcion: "Hogar de rescate y rehabilitación de tiernos manatíes amazónicos, nutrias gigantes, tortugas taricayas y monos huérfanos.",
-    destacado: "Puedes alimentarlos con biberón y aprender sobre la conservación de especies en peligro.",
-    color: "rosado"
-  },
-  {
-    nombre: "Complejo Turístico de Quistococha",
-    distrito: "San Juan Bautista",
-    descripcion: "Laguna natural de aguas oscuras rodeada de vegetación y una famosa playa artificial de arena blanca llamada Tunchi Playa.",
-    destacado: "Ideal para nadar, pasear en botes a pedal y disfrutar de un almuerzo de paiche frito.",
-    color: "verde"
-  },
-  {
-    nombre: "El Majestuoso Río Amazonas",
-    distrito: "Navegación Loreto",
-    descripcion: "El río más caudaloso y largo del planeta, Maravilla Natural del Mundo. En sus aguas confluyen el Ucayali y el Marañón para dar vida a la mayor cuenca hídrica del planeta.",
-    destacado: "Avistamiento de delfines rosados y grises nadando libremente.",
-    color: "rosado"
+    id: 3,
+    autor: "Xiomara Chota (17 años)",
+    barrio: "Belén, Iquitos",
+    categoria: "Traje Típico 🪶",
+    mensaje: "Llevo mi corona de semillas de huayruro y collar de chambira hecho por mi tía abuela. Nuestra vestimenta no es un disfraz, ¡es arte puro de la selva!",
+    likes: 56,
+    tipo: "traje",
+    avatarColor: "amarillo"
   }
 ];
 
-export const PREGUNTAS_QUIZ = [
-  {
-    pregunta: "¿Cuál es el plato más emblemático de la fiesta de San Juan el 24 de junio?",
-    opciones: [
-      { texto: "El Juane de Gallina envuelto en bijao", esCorrecta: true },
-      { texto: "Ceviche de conchas negras", esCorrecta: false },
-      { texto: "Lomo saltado", esCorrecta: false },
-      { texto: "Causa limeña", esCorrecta: false }
-    ],
-    explicacion: "¡Exacto! El 24 de junio todo Iquitos va a las playas del río con su juane de gallina bien envuelto en hoja de bijao."
+export const INICIATIVAS_CULTURALES = {
+  diaLoretano: {
+    titulo: "Feria Escolar: ¡Día Loretano en tu Colegio!",
+    lema: "Un día al año donde todo el colegio celebra nuestras raíces con alegría",
+    objetivo: "Motivar a profesores y estudiantes a organizar una jornada especial para celebrar la identidad amazónica sin timidez.",
+    actividades: [
+      {
+        nombre: "Feria Gastronómica de las Aulas",
+        descripcion: "Cada salón prepara un plato típico (Juane, Tacacho, Patarashca, Ensalada de Chonta) explicando su historia y valor nutritivo.",
+        icono: "🍲"
+      },
+      {
+        nombre: "Concurso de Cuentacuentos Ancestrales",
+        descripcion: "Los alumnos invitan a sus abuelitos o narran ellos mismos las leyendas de El Chullachaqui, El Tunche o El Bufeo.",
+        icono: "👵"
+      },
+      {
+        nombre: "Desfile de Trajes con Materiales de la Selva",
+        descripcion: "Exhibición de vestimentas elaboradas con fibras de chambira, semillas de huayruro, tintes de achiote y cortezas naturales.",
+        icono: "🪶"
+      },
+      {
+        nombre: "Concurso de Bombo Baile y Pandilla",
+        descripcion: "Bailar en comunidad al son de la quenilla y el tamboril, celebrando la unión y la alegría del pueblo loretano.",
+        icono: "🥁"
+      }
+    ]
   },
-  {
-    pregunta: "¿Cómo descubres que alguien es el Chullachaqui en el monte?",
-    opciones: [
-      { texto: "Mirándole los pies: tiene uno humano y otro de animal", esCorrecta: true },
-      { texto: "Porque tiene ojos color verde neón", esCorrecta: false },
-      { texto: "Porque habla con acento extranjero", esCorrecta: false },
-      { texto: "Porque no come tacacho", esCorrecta: false }
+  domingoSinCelular: {
+    titulo: "El Reto: 'Domingo sin Celular en Casa'",
+    lema: "2 horas sin pantallas para escuchar los cuentos de la abuelita",
+    objetivo: "Volver a la calidez de la conversación familiar en la hamaca o alrededor de una jarra de aguajina bien fría.",
+    pasosReto: [
+      { paso: "1", texto: "El domingo a las 5:00 PM, todos en casa ponen sus celulares en una canasta de mimbre." },
+      { paso: "2", texto: "Preparamos un jarro de aguajina o masato bien heladito con unos plátanos fritos." },
+      { paso: "3", texto: "Nos sentamos en la vereda o en la sala y le pedimos a la abuelita o al abuelo: '¡Cuéntanos un cuento de cuando eras joven!'." },
+      { paso: "4", texto: "Escuchamos historias sobre cómo era el río, los espíritus del monte y los bailes de antes." }
     ],
-    explicacion: "¡Así es! Su pie desigual (de venado o sachavaca) es lo único que no puede esconder el duende protector del monte."
-  },
-  {
-    pregunta: "¿Qué significa en Iquitos cuando algo está 'de la patada'?",
-    opciones: [
-      { texto: "Que está buenísimo, increíble o espectacular", esCorrecta: true },
-      { texto: "Que alguien pateó una pelota muy lejos", esCorrecta: false },
-      { texto: "Que está roto o descompuesto", esCorrecta: false },
-      { texto: "Que hace frío", esCorrecta: false }
-    ],
-    explicacion: "¡Bravazo! 'De la patada' es la máxima expresión charapa para algo sumamente bueno."
-  },
-  {
-    pregunta: "¿Qué vehículo de tres ruedas domina las calles y es el rey del transporte en Iquitos?",
-    opciones: [
-      { texto: "El Mototaxi con su toldito colorido", esCorrecta: true },
-      { texto: "El tranvía eléctrico", esCorrecta: false },
-      { texto: "El metro subterráneo", esCorrecta: false },
-      { texto: "El monopatín eléctrico", esCorrecta: false }
-    ],
-    explicacion: "¡Iquitos es la capital continental del mototaxi! Miles de mototaxis coloridos le dan su sonido y ritmo único a la ciudad."
-  },
-  {
-    pregunta: "¿Qué fruto amazónico de color marrón escamoso por fuera y amarillo por dentro es el favorito de los loretanos?",
-    opciones: [
-      { texto: "El Aguaje", esCorrecta: true },
-      { texto: "El Durazno", esCorrecta: false },
-      { texto: "La Manzana", esCorrecta: false },
-      { texto: "El Membrillo", esCorrecta: false }
-    ],
-    explicacion: "¡El Aguaje! El fruto de la palmera de la vida, comido con su salecita o tomado en una fría y deliciosa aguajina."
+    compromiso: "“En mi casa la voz de mis abuelos vale más que mil videos de internet. ¡Este domingo apagamos el celular y encendemos el corazón!”"
   }
-];
-
-export const FRASES_TIPICAS = [
-  { frase: "¡Habla, chocherita!", significado: "Saludo cariñoso entre amigos entrañables." },
-  { frase: "¡Ya güirsa!", significado: "Expresión loretana de asentimiento o aprobación alegre." },
-  { frase: "¡Ta que calor, choche!", significado: "El comentario obligado cuando el sol de Iquitos arde a más de 34°C." },
-  { frase: "¡Avispa la oreja, paisano!", significado: "Aviso para estar siempre despierto y con reflejos de jaguar." },
-  { frase: "¡Ese juane está de la patada!", significado: "Elogio supremo al sazón de la comida amazónica." },
-  { frase: "¡Vamos a refrescarnos con una buena aguajina!", significado: "Invitación irresistible para calmar la sed con sabor regional." }
-];
+};
