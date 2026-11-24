@@ -113,22 +113,28 @@ export function Inicio({ onExplorar, onJugar }) {
                 className={`centro-card border-${centro.color}`}
                 onClick={() => setCentroSeleccionado(centro)}
               >
-                <div className="centro-card-top">
-                  <span className="centro-icon">{centro.icono}</span>
-                  <span className={`pill-badge pill-${centro.color}`}>{centro.categoria}</span>
+                {/* Imagen del Centro Turístico */}
+                <div className="centro-img-container">
+                  <img src={centro.imagen} alt={centro.nombre} className="centro-card-img" />
+                  <span className="centro-icon-badge">{centro.icono}</span>
+                  <span className={`pill-badge pill-${centro.color} centro-badge-float`}>
+                    {centro.categoria}
+                  </span>
                 </div>
 
-                <h3 className="centro-nombre">{centro.nombre}</h3>
-                <span className="centro-distrito">📍 {centro.distrito}</span>
-                <p className="centro-descripcion">{centro.descripcion}</p>
+                <div className="centro-card-body">
+                  <h3 className="centro-nombre">{centro.nombre}</h3>
+                  <span className="centro-distrito">📍 {centro.distrito}</span>
+                  <p className="centro-descripcion">{centro.descripcion}</p>
 
-                <div className="centro-saber-box">
-                  <span className="saber-icon">✨</span>
-                  <p><strong>Lo que debes saber:</strong> {centro.loQueDebesSaber}</p>
-                </div>
+                  <div className="centro-saber-box">
+                    <span className="saber-icon">✨</span>
+                    <p><strong>Lo que debes saber:</strong> {centro.loQueDebesSaber}</p>
+                  </div>
 
-                <div className="centro-card-footer">
-                  <span className="btn-ver-detalle">Ver dato curioso y detalles →</span>
+                  <div className="centro-card-footer">
+                    <span className="btn-ver-detalle">Ver historia, fotos y datos curiosos →</span>
+                  </div>
                 </div>
               </article>
             ))}
@@ -140,6 +146,20 @@ export function Inicio({ onExplorar, onJugar }) {
           <div className="modal-backdrop" onClick={() => setCentroSeleccionado(null)}>
             <div className="modal-content modal-centro-detalle" onClick={e => e.stopPropagation()}>
               <button className="modal-close" onClick={() => setCentroSeleccionado(null)}>✕</button>
+
+              {/* Banner de foto completa del centro turístico */}
+              {centroSeleccionado.imagen && (
+                <div className="modal-centro-img-header">
+                  <img
+                    src={centroSeleccionado.imagen}
+                    alt={centroSeleccionado.nombre}
+                    className="modal-centro-hero-img"
+                  />
+                  <div className="modal-centro-img-gradient">
+                    <span className="modal-centro-caption-loc">📍 {centroSeleccionado.distrito}</span>
+                  </div>
+                </div>
+              )}
 
               <div className="modal-centro-header">
                 <span className="modal-centro-icono">{centroSeleccionado.icono}</span>
@@ -154,11 +174,29 @@ export function Inicio({ onExplorar, onJugar }) {
 
               <p className="modal-centro-desc">{centroSeleccionado.descripcion}</p>
 
+              {/* Historia y orígenes */}
+              {centroSeleccionado.historia && (
+                <div className="modal-historia-card">
+                  <h4>📜 Historia y Origen:</h4>
+                  <p>{centroSeleccionado.historia}</p>
+                </div>
+              )}
+
+              {/* Por qué es un orgullo */}
               <div className="modal-saber-card">
                 <h4>🌟 ¿Por qué es un orgullo para los loretanos?</h4>
                 <p>{centroSeleccionado.loQueDebesSaber}</p>
               </div>
 
+              {/* Experiencia imperdible */}
+              {centroSeleccionado.imperdible && (
+                <div className="modal-imperdible-card">
+                  <h4>📸 Experiencia Imperdible:</h4>
+                  <p>{centroSeleccionado.imperdible}</p>
+                </div>
+              )}
+
+              {/* Dato curioso */}
               <div className="modal-curioso-card">
                 <h4>💡 Dato Curioso:</h4>
                 <p>{centroSeleccionado.datoCurioso}</p>
