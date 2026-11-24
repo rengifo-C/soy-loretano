@@ -3,7 +3,7 @@ import { CUENTOS_ABUELITOS } from '../data/loretanoData';
 import { DelfinRosado } from './AmazonDrawings';
 
 export function CuentosSelva() {
-  const [cuentoActivoId, setCuentoActivoId] = useState('tunche');
+  const [cuentoActivoId, setCuentoActivoId] = useState('chullachaqui');
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('Todos');
   const [reproduciendo, setReproduciendo] = useState(false);
   const [segundoActual, setSegundoActual] = useState(0);
@@ -112,7 +112,7 @@ export function CuentosSelva() {
         </div>
       </div>
 
-      {/* Selector de los 10 Cuentos con diseño colorido y tipografía llamativa */}
+      {/* Selector de los 9 Cuentos Amazónicos con imágenes auténticas y tipografía llamativa */}
       <div className="cuentos-carrusel-grid">
         {cuentosFiltrados.map(c => (
           <button
@@ -121,7 +121,11 @@ export function CuentosSelva() {
             className={`btn-cuento-card card-glow-${c.color} ${cuentoActivoId === c.id ? 'active' : ''}`}
           >
             <div className="cuento-card-icon-wrap">
-              <span className="cuento-card-icon">{c.videoThumbnail}</span>
+              {c.imagen ? (
+                <img src={c.imagen} alt={c.titulo} className="cuento-card-thumb-img" />
+              ) : (
+                <span className="cuento-card-icon">{c.videoThumbnail}</span>
+              )}
             </div>
             <div className="cuento-card-info">
               <span className={`cuento-cat-tag tag-${c.color}`}>{c.categoria}</span>
@@ -150,9 +154,16 @@ export function CuentosSelva() {
               <span className="live-dot">●</span> Relato Loretano en Vivo
             </div>
 
-            {/* Ilustración de fondo */}
+            {/* Ilustración artística del Cuento */}
             <div className="video-art-bg">
-              <span className="video-art-icon-giant">{cuento.videoThumbnail}</span>
+              {cuento.imagen ? (
+                <div className="video-cover-wrapper">
+                  <img src={cuento.imagen} alt={cuento.titulo} className="cuento-video-cover-img" />
+                  <div className="video-art-overlay-gradient"></div>
+                </div>
+              ) : (
+                <span className="video-art-icon-giant">{cuento.videoThumbnail}</span>
+              )}
             </div>
 
             {/* Botón central de Play / Pausa */}
@@ -254,6 +265,17 @@ export function CuentosSelva() {
             <span className="quote-badge">“</span>
             <p className="frase-abuelito-texto">{cuento.fraseAbuelito}</p>
           </div>
+
+          {/* Ilustración artística del Cuento */}
+          {cuento.imagen && (
+            <div className="cuento-art-showcase-box">
+              <img src={cuento.imagen} alt={cuento.titulo} className="cuento-art-showcase-img" />
+              <div className="cuento-art-caption">
+                <span className="caption-tag">📸 {cuento.titulo}</span>
+                <span className="caption-sub">🌟 {cuento.personaje}</span>
+              </div>
+            </div>
+          )}
 
           {/* Párrafos del Cuento con Letra Capital */}
           <div className="cuento-parrafos">
