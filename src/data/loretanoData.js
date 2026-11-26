@@ -213,10 +213,13 @@ export const RECETAS_PASO_PASO = [
   {
     id: "juane",
     nombre: "Juane de Gallina Tradicional",
+    imagen: "/assets/recetas/juane.jpg",
     color: "verde",
     tiempo: "1 h 30 min",
     dificultad: "Fácil de aprender en familia",
     icono: "🍃",
+    concepto: "El plato sagrado de la fiesta patronal de San Juan (24 de junio). Su forma redonda representa la cabeza del santo patrono San Juan Bautista y es el símbolo supremo de reunión y confraternidad familiar loretana.",
+    lema: "¡El sabor que une a toda la familia loretana!",
     historia: "El plato sagrado de la fiesta de San Juan (24 de junio). Su forma redonda representa la cabeza de San Juan Bautista y es el símbolo supremo de reunión familiar.",
     ingredientes: [
       "1 kg de arroz blanco de grano entero",
@@ -257,10 +260,13 @@ export const RECETAS_PASO_PASO = [
   {
     id: "tacacho",
     nombre: "Tacacho con Cecina y Chorizo",
+    imagen: "/assets/recetas/tacacho.jpg",
     color: "amarillo",
     tiempo: "40 min",
     dificultad: "Rápido y delicioso",
     icono: "🍌",
+    concepto: "El majado ancestral de plátano bellaco asado al carbón con chicharrón crujiente y manteca de cerdo, acompañado de jugosa cecina ahumada. Su nombre proviene de la voz quechua 'taka chu', que significa 'golpear o majar con fuerza'.",
+    lema: "¡Energía y tradición que alimenta el alma selvática!",
     historia: "El desayuno y almuerzo que llena de energía al loretano. La palabra 'tacacho' viene del quechua 'taka chu', que significa 'golpear o majar plátano'.",
     ingredientes: [
       "6 plátanos verdes bellacos (frescos y duros)",
@@ -300,10 +306,13 @@ export const RECETAS_PASO_PASO = [
   {
     id: "patarashca",
     nombre: "Patarashca de Pescado de Río",
+    imagen: "/assets/recetas/patarashca.jpg",
     color: "rosado",
     tiempo: "45 min",
     dificultad: "Sabor ancestral",
     icono: "🐟",
+    concepto: "Técnica culinaria milenaria de los pueblos originarios de la Amazonía. Pescado fresco entero de río sazonado con sacha culantro, ají dulce y cebolla regional, envuelto en hojas de bijao y asado a las brasas como en un horno ecológico natural.",
+    lema: "¡El auténtico aroma del río Amazonas servido en hoja!",
     historia: "Técnica milenaria de los pueblos originarios de Loreto para cocinar los pescados frescos de río usando las hojas del bosque como horno natural.",
     ingredientes: [
       "4 pescados enteros de río (paiche, doncella, sábalo o boquichico)",

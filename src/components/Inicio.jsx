@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CENTROS_TURISTICOS_IQUITOS } from '../data/loretanoData';
+import { CENTROS_TURISTICOS_IQUITOS, RECETAS_PASO_PASO } from '../data/loretanoData';
 import { DelfinRosado, Guacamayo, Mototaxi, VictoriaRegia } from './AmazonDrawings';
 
 export function Inicio({ onExplorar, onJugar }) {
@@ -75,6 +75,68 @@ export function Inicio({ onExplorar, onJugar }) {
           </div>
           <div className="foto-art-float float-guacamayo">
             <Guacamayo className="w-24 h-28" />
+          </div>
+        </div>
+
+        {/* =========================================================================
+            SECCIÓN PRINCIPAL: LOS 3 PLATOS SAGRADOS DE LORETO (JUANE, TACACHO Y PATARASHCA)
+            Representando su concepto cultural, fotos reales y tipografía llamativa
+           ========================================================================= */}
+        <div className="seccion-platos-principales">
+          <div className="platos-header-main">
+            <span className="badge-tag tag-delicia">🍲 Gastronomía Sagrada de Loreto</span>
+            <h2 className="platos-main-title">
+              Nuestra Identidad a Través del Sabor: <span className="highlight-comida">Juane, Tacacho y Patarashca</span>
+            </h2>
+            <p className="platos-main-desc">
+              Cada bocado guarda siglos de tradición amazónica, aromas a leña viva, hojas de bijao soasadas
+              y el amor de nuestras abuelas. ¡Conoce y siéntete orgulloso del concepto de nuestros tres manjares sagrados!
+            </p>
+          </div>
+
+          <div className="platos-principales-grid">
+            {RECETAS_PASO_PASO.map((plato) => (
+              <div key={plato.id} className={`plato-hero-card border-card-${plato.color}`}>
+                <div className="plato-img-showcase-box">
+                  <img src={plato.imagen} alt={plato.nombre} className="plato-hero-img" />
+                  <span className="plato-tipo-pill">{plato.icono} 100% Sabor Loretano</span>
+                  <div className="plato-img-gradient-scrim"></div>
+                </div>
+
+                <div className="plato-hero-content">
+                  <div className="plato-title-row">
+                    <span className="plato-icon-badge">{plato.icono}</span>
+                    <div>
+                      <h3 className="plato-hero-nombre">{plato.nombre}</h3>
+                      <span className="plato-hero-lema">{plato.lema}</span>
+                    </div>
+                  </div>
+
+                  <div className="plato-concepto-box">
+                    <h4 className="concepto-title">✨ Concepto y Significado:</h4>
+                    <p className="concepto-text">{plato.concepto}</p>
+                  </div>
+
+                  <div className="plato-meta-tags">
+                    <span className="tag-meta-item">⏱️ {plato.tiempo}</span>
+                    <span className="tag-meta-item">🍃 Envuelto en Bijao</span>
+                    <span className="tag-meta-item">🔥 Fogón de Leña</span>
+                  </div>
+
+                  <button
+                    onClick={() => {
+                      const seccionRecetas = document.getElementById('recetas');
+                      if (seccionRecetas) {
+                        seccionRecetas.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                    className={`btn-ver-receta-completa btn-receta-${plato.color}`}
+                  >
+                    📖 Ver Receta Paso a Paso con Ingredientes →
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 

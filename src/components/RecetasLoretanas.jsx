@@ -64,6 +64,11 @@ export function RecetasLoretanas() {
             <span className={`pill-badge pill-${receta.color}`}>100% Loreto</span>
             <h3 className="receta-title">{receta.nombre}</h3>
             <p className="receta-historia">"{receta.historia}"</p>
+            {receta.concepto && (
+              <p className="receta-concepto-detalle">
+                <strong>Concepto y Tradición:</strong> {receta.concepto}
+              </p>
+            )}
 
             <div className="receta-badges-meta">
               <span className="meta-badge">⏱️ {receta.tiempo}</span>
@@ -73,9 +78,18 @@ export function RecetasLoretanas() {
           </div>
 
           <div className="receta-art-box">
-            {receta.id === 'patarashca' && <Paiche className="w-36 h-28" />}
-            {receta.id === 'juane' && <VictoriaRegia className="w-36 h-24" />}
-            {receta.id === 'tacacho' && <div className="tacacho-giant-art">🍌🪵🥓</div>}
+            {receta.imagen ? (
+              <div className="receta-hero-photo-wrap">
+                <img src={receta.imagen} alt={receta.nombre} className="receta-hero-real-img" />
+                <span className="receta-photo-caption">📸 Plato Tradicional Loretano</span>
+              </div>
+            ) : (
+              <>
+                {receta.id === 'patarashca' && <Paiche className="w-36 h-28" />}
+                {receta.id === 'juane' && <VictoriaRegia className="w-36 h-24" />}
+                {receta.id === 'tacacho' && <div className="tacacho-giant-art">🍌🪵🥓</div>}
+              </>
+            )}
           </div>
         </div>
 
@@ -110,9 +124,8 @@ export function RecetasLoretanas() {
                 <button
                   key={p.numero}
                   onClick={() => setPasoActivoIndex(idx)}
-                  className={`stepper-btn ${pasoActivoIndex === idx ? 'active-step' : ''} ${
-                    pasosCompletados[`${receta.id}-${p.numero}`] ? 'step-done' : ''
-                  }`}
+                  className={`stepper-btn ${pasoActivoIndex === idx ? 'active-step' : ''} ${pasosCompletados[`${receta.id}-${p.numero}`] ? 'step-done' : ''
+                    }`}
                 >
                   Paso {p.numero}
                   {pasosCompletados[`${receta.id}-${p.numero}`] && " ✓"}
