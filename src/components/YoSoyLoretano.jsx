@@ -149,7 +149,10 @@ export function YoSoyLoretano() {
             }}
             className={`btn-danza-tab tab-glow-${d.color} ${danzaActivaId === d.id ? 'active' : ''}`}
           >
-            <span className="danza-tab-icon">{d.icono}</span>
+            <div className="danza-tab-thumb-wrap">
+              <img src={d.imagen} alt={d.nombre} className="danza-tab-thumb-img" />
+              <span className="danza-tab-badge-icon">{d.icono}</span>
+            </div>
             <div className="danza-tab-text">
               <strong className="danza-tab-name">{d.nombre}</strong>
               <small className="danza-tab-sub">{d.subtitulo.split('(')[0]}</small>
@@ -161,22 +164,46 @@ export function YoSoyLoretano() {
       {/* Vitrina Interactiva de la Danza Seleccionada */}
       <div className={`danza-showcase-card border-danza-${danza.color}`}>
         <div className="danza-showcase-header">
-          <div className="danza-header-left">
-            <span className={`pill-badge badge-${danza.color}`}>Danza Tradicional Loretana</span>
-            <h3 className="danza-titulo-monumental">{danza.nombre}</h3>
-            <span className="danza-subtitulo-hero">✨ {danza.subtitulo}</span>
-            <span className="danza-origen-tag">📍 <strong>Origen:</strong> {danza.origen}</span>
+          {/* Fotografía Tradicional de la Danza */}
+          <div className="danza-hero-image-box">
+            <div className="danza-image-container">
+              <img
+                src={danza.imagen}
+                alt={danza.nombre}
+                className="danza-hero-img-real"
+              />
+              <div className="danza-image-tag-badge">
+                <span>📸 Fotografía Tradicional: {danza.nombre}</span>
+              </div>
+            </div>
           </div>
 
-          <div className="danza-art-emblem">
-            <span className="danza-giant-emoji">{danza.icono}</span>
-            <button
-              onClick={reproducirRitmoBombo}
-              className={`btn-ritmo-bombo ${reproduciendoRitmo ? 'tocando' : ''}`}
-              title="Escuchar compás de bombo"
-            >
-              {reproduciendoRitmo ? "🥁 ¡Tocando Bombo...!" : "🥁 Simular Golpe de Bombo"}
-            </button>
+          {/* Información y Percusión */}
+          <div className="danza-header-info-col">
+            <div className="danza-pills-row">
+              <span className={`pill-badge badge-${danza.color}`}>Danza Tradicional Loretana</span>
+              <span className="pill-badge pill-folclore">🎭 Folclore Amazónico</span>
+            </div>
+            <h3 className="danza-titulo-monumental">{danza.nombre}</h3>
+            <span className="danza-subtitulo-hero">✨ {danza.subtitulo}</span>
+            <p className="danza-origen-tag">📍 <strong>Origen:</strong> {danza.origen}</p>
+
+            <div className="danza-bombo-interactive-box">
+              <div className="bombo-callout">
+                <span className="bombo-big-icon">🥁</span>
+                <div>
+                  <strong>Percusión y Bombo Baile Amazónico</strong>
+                  <p>Escucha el ritmo vibrante de esta estampa amazónica:</p>
+                </div>
+              </div>
+              <button
+                onClick={reproducirRitmoBombo}
+                className={`btn-ritmo-bombo ${reproduciendoRitmo ? 'tocando' : ''}`}
+                title="Escuchar compás de bombo"
+              >
+                {reproduciendoRitmo ? "🥁 ¡Sintiendo el Bombo Baile...!" : "🥁 Tocar Compás de Bombo Baile"}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -336,9 +363,9 @@ export function YoSoyLoretano() {
                   className="input-subir select-subir"
                 >
                   <option>Danza: La Pandilla Loretana 💃</option>
-                  <option>Danza: El Buri Buriti 🏹</option>
-                  <option>Danza: Orgullo Shipibo 🪶</option>
-                  <option>Danza: El Sitaracuy 🐜</option>
+                  <option>Danza: El Buri Buriti (Buri Buri) 🏹</option>
+                  <option>Danza: Orgullo Shipibo (Danza Shipiba) 🪶</option>
+                  <option>Danza: El Sitaracuy (Danzas de Sitaracuy) 🐜</option>
                   <option>Mi Traje Típico Loretano 👑</option>
                   <option>Mi Comida Tradicional 🍲</option>
                 </select>
