@@ -6,6 +6,7 @@ export const CUENTOS_ABUELITOS = [
     "id": "chullachaqui",
     "titulo": "El Misterio del Chullachaqui",
     "imagen": "/assets/cuentos/chullachaqui.jpg",
+    "fondoVideo": "/assets/cuentos/fondo-abuelita-rosa.jpg",
     "narrador": "Abuelita Rosa (82 años, nacida en Belén - Iquitos)",
     "personaje": "El duende protector de los bosques vírgenes con pie desigual",
     "categoria": "Espíritus del Monte",

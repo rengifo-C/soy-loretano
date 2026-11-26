@@ -154,9 +154,18 @@ export function CuentosSelva() {
               <span className="live-dot">●</span> Relato Loretano en Vivo
             </div>
 
-            {/* Ilustración artística del Cuento */}
+            {/* Ilustración artística del Cuento / Fondo de Video */}
             <div className="video-art-bg">
-              {cuento.imagen ? (
+              {cuento.fondoVideo || (cuento.narrador.includes('Abuelita Rosa') ? '/assets/cuentos/fondo-abuelita-rosa.jpg' : null) ? (
+                <div className="video-cover-wrapper">
+                  <img
+                    src={cuento.fondoVideo || '/assets/cuentos/fondo-abuelita-rosa.jpg'}
+                    alt={`Fondo natural de la selva de ${cuento.narrador.split('(')[0]}`}
+                    className="cuento-video-cover-img fondo-personalizado"
+                  />
+                  <div className="video-art-overlay-gradient soft"></div>
+                </div>
+              ) : cuento.imagen ? (
                 <div className="video-cover-wrapper">
                   <img src={cuento.imagen} alt={cuento.titulo} className="cuento-video-cover-img" />
                   <div className="video-art-overlay-gradient"></div>

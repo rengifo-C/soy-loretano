@@ -1394,10 +1394,20 @@
   transition: opacity 0.5s ease;
 }
 
+.cuento-video-cover-img.fondo-personalizado {
+  opacity: 0.88;
+  filter: saturate(1.25) contrast(1.1) brightness(0.96);
+  object-position: center 30%;
+}
+
 .video-art-overlay-gradient {
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at center, rgba(6, 78, 59, 0.45) 0%, rgba(6, 26, 17, 0.92) 100%);
+}
+
+.video-art-overlay-gradient.soft {
+  background: linear-gradient(180deg, rgba(6, 30, 20, 0.22) 0%, rgba(6, 26, 17, 0.65) 100%);
 }
 
 .video-art-icon-giant {
