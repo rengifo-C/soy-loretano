@@ -50,7 +50,7 @@ export function App() {
               🎮 Juego & Puntos
             </button>
             <button onClick={() => scrollTo('yo-soy-loretano')} className="nav-item nav-orgullo">
-              📸 Yo Soy Loretano
+              💃 Danzas & Orgullo
             </button>
             <button onClick={() => scrollTo('iniciativas')} className="nav-item">
               🏫 Feria & Reto
@@ -138,7 +138,7 @@ export function App() {
               <li><button onClick={() => scrollTo('cuentos')}>2. Cuentos de los Abuelitos</button></li>
               <li><button onClick={() => scrollTo('recetas')}>3. Recetas Paso a Paso</button></li>
               <li><button onClick={() => scrollTo('juego')}>4. Juego: ¿Cuánto Sabes?</button></li>
-              <li><button onClick={() => scrollTo('yo-soy-loretano')}>5. Muro: Yo Soy Loretano</button></li>
+              <li><button onClick={() => scrollTo('yo-soy-loretano')}>5. Danzas Tradicionales de Loreto</button></li>
               <li><button onClick={() => scrollTo('iniciativas')}>• Feria y Domingo sin Celular</button></li>
             </ul>
           </div>

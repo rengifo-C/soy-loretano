@@ -427,36 +427,105 @@ export const NIVELES_JUEGO = [
   { puntosMin: 551, puntosMax: 9999, nombre: "¡Gran Sabio Loretano! 🐆👑", insignia: "🏆", mensaje: "¡Puro Orgullo Loretano! Eres un embajador digno de nuestra cultura en el mundo." }
 ];
 
+export const DANZAS_TRADICIONALES_LORETO = [
+  {
+    id: "pandilla",
+    nombre: "La Pandilla Loretana",
+    subtitulo: "Danza Alegre de la Humisha y San Juan",
+    icono: "💃",
+    color: "amarillo",
+    origen: "Fiestas Patronales y Carnavales de todo Loreto (Iquitos, Requena, Yurimaguas)",
+    ritmo: "Bombo Baile tradicional, redoblante, tamboril y clarinete",
+    significado: "La danza folclórica reina de Loreto. Se baila en comparsas multitudinarias alrededor de la 'Humisha' (palmera adornada con regalos). Simboliza la alegría desbordante, la hermandad de los barrios y la celebración de la vida en la selva.",
+    paso: "Saltos sincronizados hacia adelante y atrás con zapateo rítmico, agitando un pañuelo blanco en la mano derecha al grito contagioso de: '¡Iiiishaaa!'.",
+    vestimenta: "Mujeres con faldas anchas floreadas de colores vivos y blusas de encajes; varones con camisas alegres, pantalones arremangados y pañuelo al cuello.",
+    gritoLema: "¡Iiiishaaa! ¡A bailar la pandilla hasta tumbar la humisha!",
+    curiosidad: "En la fiesta de San Juan (24 de junio), las pandillas recorren las calles desde la madrugada uniendo a familias enteras sin importar la edad."
+  },
+  {
+    id: "buri-buriti",
+    nombre: "El Buri Buriti",
+    subtitulo: "Danza Guerrera de los Mayorunas",
+    icono: "🏹",
+    color: "marron",
+    origen: "Comunidad Nativa Mayoruna / Matsés (Frontera de Loreto con el río Yaquerana)",
+    ritmo: "Manguaré ancestral, tambores de cuero de sachavaca y maracas guerreras",
+    significado: "Danza ritual y de combate que recrea la preparación de los bravos guerreros Matsés para defender su territorio sagrado de invasores y salir a cazar animales mayores. Exalta el coraje, la fortaleza física y la lealtad comunitaria.",
+    paso: "Zancadas acrobáticas en cuclillas, saltos vigorosos de ataque y repliegue táctico, giros veloces empuñando lanzas de chonta y arcos apuntando al firmamento.",
+    vestimenta: "Taparrabos confeccionados en corteza vegetal de llanchama, pintura corporal geométrica con huito y achiote, y tocados de plumas de guacamayo.",
+    gritoLema: "¡Guerreros indómitos que defienden el bosque con honor y valentía!",
+    curiosidad: "Los guerreros imitaban la mirada y sigilo del otorongo amazónico para avanzar entre la espesura sin hacer el menor ruido."
+  },
+  {
+    id: "orgullo-shipibo",
+    nombre: "Orgullo Shipibo",
+    subtitulo: "Danza Ceremonial del Kené y la Sanación",
+    icono: "🪶",
+    color: "rosado",
+    origen: "Pueblo Shipibo-Konibo (Cuenca del Río Ucayali en Loreto)",
+    ritmo: "Quenillas de caña brava, tamborcillos de madera, shacapas (sonajas de semillas) e íkaros",
+    significado: "Danza de reverencia cósmica y sanación espiritual. Rinde tributo a las maestras artesanas que plasman los sagrados laberintos geométricos 'Kené' en sus faldas y cerámicas, inspirados en la gran anaconda cósmica (Ronin) y en las visiones de plantas maestras.",
+    paso: "Movimientos sinuosos, cadenciosos y elegantes con brazos extendidos que emulan las ondulaciones del río y el aleteo de las aves sagradas.",
+    vestimenta: "Faldas tradicionales bordadas con el arte geométrico Kené ('chitonte'), coronas de plumas de aves selváticas, collares de huayruro y vasijas de barro ('chomo').",
+    gritoLema: "¡El arte del Kené es la voz espiritual de la selva que sana el corazón!",
+    curiosidad: "Los diseños del Kené no son simples dibujos: representan mapas astrales y cantos medicinales que las sabias abuelas pueden cantar nota por nota."
+  },
+  {
+    id: "sitaracuy",
+    nombre: "El Sitaracuy",
+    subtitulo: "La Pícara Danza de las Hormigas Bravas",
+    icono: "🐜",
+    color: "verde",
+    origen: "Caseríos ribereños del Río Nanay y Río Amazonas (Loreto)",
+    ritmo: "Bombo baile acelerado, quena festiva y redoblante picado",
+    significado: "Una de las danzas más divertidas, cómicas y contagiosas del folclore loretano. Representa la cómica desesperación de los agricultores cuando pisan accidentalmente un nido de hormigas 'sitaracus', cuyas ardientes picaduras los hacen dar brincos desenfrenados.",
+    paso: "Saltos continuos y acelerados sobre un pie y otro, palmadas enérgicas en los muslos, pantorrillas y brazos simulando quitarse las hormigas, con muecas jocosas y risas compartidas.",
+    vestimenta: "Ropa ligera de campesino ribereño, sombreros de paja de toquilla y ramitas verdes que usan a modo de espantamoscas para sacudirse los insectos.",
+    gritoLema: "¡Ay, ay, ay... me pica el sitaraco! ¡A saltar y zapatear con alegría!",
+    curiosidad: "En los festivales escolares, el Sitaracuy es el baile que más carcajadas y aplausos desata por la espontaneidad y picardía de los bailarines."
+  }
+];
+
 export const PUBLICACIONES_INICIALES = [
   {
     id: 1,
     autor: "Luciana Rengifo (16 años)",
     barrio: "San Juan Bautista, Iquitos",
-    categoria: "Baile Tradicional 💃",
-    mensaje: "¡Bailando la pandilla en el festival de mi colegio! Antes me daba vergüenza vestirme con traje tradicional, pero hoy siento que llevo la historia viva de mis antepasados. ¡Yo soy de Iquitos con mucho orgullo!",
-    likes: 42,
+    categoria: "Danza: La Pandilla Loretana 💃",
+    mensaje: "¡Bailando la pandilla en la fiesta de San Juan de mi colegio! Antes sentía vergüenza de ponerme la falda floreada, pero hoy sé que zapatear al compás del bombo baile es llevar con orgullo la alegría más grande del Perú. ¡Yo soy de Iquitos!",
+    likes: 54,
     tipo: "baile",
-    avatarColor: "rosado"
+    avatarColor: "amarillo"
   },
   {
     id: 2,
-    autor: "Mateo Vásquez (15 años)",
+    autor: "Kael Mori (15 años)",
     barrio: "Punchana, Iquitos",
-    categoria: "Comida Típica 🍲",
-    mensaje: "Mi abuela me enseñó a soasar la hoja de bijao para envolver juane. ¡Nos quedó de la patada! Cocinar nuestra comida es el mejor homenaje a mi familia.",
-    likes: 38,
-    tipo: "comida",
-    avatarColor: "verde"
+    categoria: "Danza: El Buri Buriti 🏹",
+    mensaje: "Presentamos la danza guerrera de los Mayorunas con arcos de chonta y pintura de huito. Sentir la fuerza de nuestros antepasados guerreros me hizo darme cuenta de lo valiente y poderosa que es nuestra sangre amazónica.",
+    likes: 49,
+    tipo: "baile",
+    avatarColor: "marron"
   },
   {
     id: 3,
     autor: "Xiomara Chota (17 años)",
     barrio: "Belén, Iquitos",
-    categoria: "Traje Típico 🪶",
-    mensaje: "Llevo mi corona de semillas de huayruro y collar de chambira hecho por mi tía abuela. Nuestra vestimenta no es un disfraz, ¡es arte puro de la selva!",
-    likes: 56,
-    tipo: "traje",
-    avatarColor: "amarillo"
+    categoria: "Danza: Orgullo Shipibo 🪶",
+    mensaje: "Llevo mi chitonte con bordados Kené que me enseñó mi abuela. Cada trazo es un rezo y una melodía de sanación. ¡Nuestra cultura viva merece ser mostrada al mundo entero con la frente en alto!",
+    likes: 67,
+    tipo: "baile",
+    avatarColor: "rosado"
+  },
+  {
+    id: 4,
+    autor: "Renato Dávila (14 años)",
+    barrio: "Morona Cocha, Iquitos",
+    categoria: "Danza: El Sitaracuy 🐜",
+    mensaje: "¡Bailando el Sitaracuy nos matamos de risa con toda la gente! Saltando y dándonos palmadas por las hormigas bravas. ¡Qué lindo es ser loretano y tener danzas tan divertidas y llenas de chispa!",
+    likes: 61,
+    tipo: "baile",
+    avatarColor: "verde"
   }
 ];
 
